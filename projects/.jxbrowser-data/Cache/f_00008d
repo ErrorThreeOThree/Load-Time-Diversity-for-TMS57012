@@ -1,0 +1,122 @@
+[
+  {
+    "text": "Code Composer Studio",
+    "type": "folder",
+    "numChildren": 222,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewImage": "tirex-product-tree/ccs_devtools_1_00_00_21/ccs_cube.png",
+    "overviewDescription": "Code Composer Studio (CCS) is an integrated development environment (IDE) that supports TI's Microcontroller and Embedded Processors portfolio. Code Composer Studio comprises a suite of tools used to develop and debug embedded applications. It includes an optimizing C/C++ compiler, source code editor, project build environment, debugger, profiler, and many other features. The intuitive IDE provides a single user interface taking you through each step of the application development flow. Familiar tools and interfaces allow users to get started faster than ever before. Code Composer Studio combines the advantages of the Eclipse software framework with advanced embedded debug capabilities from TI resulting in a compelling feature-rich development environment for embedded developers.",
+    "packageOrder": 0
+  },
+  {
+    "text": "MSP430 GCC",
+    "type": "folder",
+    "numChildren": 1118,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewDescription": "The MSP430 GCC compiler is owned by TI and maintained by Somnium. (Red Hat maintained the MSP430 GCC compiler through first quarter 2016.) The MSP430 GCC compiler is provided within the MSP430-GCC-OPENSOURCE package.",
+    "overviewImage": "tirex-product-tree/simplelink-devtools/.metadata/.tirex/img/GNU_Compiler_Collection_logo.png",
+    "packageOrder": 0
+  },
+  {
+    "text": "IAR Embedded Workbench for MSP430",
+    "type": "folder",
+    "numChildren": 1118,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewDescription": "IAR Embedded Workbench Kickstart for MSP430 is a complete debugger and C/C++ compiler toolchain for building and debugging embedded applications based on MSP430  microcontrollers. The code size limitation of C/C++ compiler is set to 8 KB. The Debugger is a fully integrated debugger for source and disassembly level debugging with support for complex code and data breakpoint.",
+    "overviewImage": "tirex-product-tree/simplelink-devtools/.metadata/.tirex/img/Template-monitor-b-perspective-trace-power-debugging.jpg",
+    "packageOrder": 0
+  },
+  {
+    "text": "IAR Embedded Workbench for ARM",
+    "type": "folder",
+    "numChildren": 64,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewDescription": "IAR Embedded Workbench for ARM is a complete debugger and C/C++ compiler toolchain for building and debugging embedded applications based on ARM microcontrollers. The code size limitation of C/C++ compiler is set to 32KB. The Debugger is a fully integrated debugger for source and disassembly level debugging with support for complex code and data breakpoint.",
+    "overviewImage": "tirex-product-tree/simplelink-devtools/.metadata/.tirex/img/Template-monitor-b-perspective-trace-power-debugging.jpg",
+    "packageOrder": 0
+  },
+  {
+    "text": "KEIL MDK-ARM",
+    "type": "folder",
+    "numChildren": 20,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewDescription": "ARM Keil MDK is a complete debugger and C/C++ compiler toolchain for building and debugging embedded applications. Keil MDK supports the low-power + high performance MSP432 MCU family, and includes a fully integrated debugger for source and disassembly level debugging with support for complex code and data breakpoint.",
+    "overviewImage": "tirex-product-tree/simplelink-devtools/.metadata/.tirex/img/keil_mdk.png",
+    "packageOrder": 0
+  },
+  {
+    "text": "ROWLEY CrossWorks for MSP430",
+    "type": "folder",
+    "numChildren": 559,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewDescription": "CrossWorks for MSP430 is the complete development solution for all your MSP430 projects—from initial design through to final production, CrossWorks has it covered. Based on the successful work we have provided to OEM customers, our offering continues to move from strength to strength.",
+    "overviewImage": "tirex-product-tree/simplelink-devtools/.metadata/.tirex/img/CrossWorks_Logo.png",
+    "packageOrder": 0
+  },
+  {
+    "text": "EMPROG ThunderBench for MSP430",
+    "type": "folder",
+    "numChildren": 559,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewDescription": "TThunderBench for MSP430 is the most comprehensive and best integration of a C/C++ compiler, debugger and IDE within the Eclipse platform for any MSP430 device.",
+    "overviewImage": "tirex-product-tree/simplelink-devtools/.metadata/.tirex/img/MSP430-main.png",
+    "packageOrder": 0
+  },
+  {
+    "text": "Open On-Chip Debugger (OpenOCD) for SimpleLink™ Connected MCUs",
+    "type": "folder",
+    "numChildren": 27,
+    "numChildrenLocal": 0,
+    "children": true,
+    "allowPartialDownload": false,
+    "state": {
+      "opened": false
+    },
+    "url": "/api/resources?path=Development%20Tools/Integrated%20Development%20Environments&package=com.ti.SIMPLELINK_CC13X0_SDK__2.40.00.20::com.ti.SIMPLELINK_CC13X2_26X2_SDK__2.40.00.81::com.ti.SIMPLELINK_CC13X2_SDK__2.30.00.45::com.ti.SIMPLELINK_CC26X2_SDK__2.30.00.34::com.ti.SIMPLELINK_CC2640R2_SDK__2.40.00.32::com.ti.SIMPLELINK_MSP432_SDK__2.40.00.10::com.ti.SIMPLELINK_MSP432E4_SDK__2.40.00.11::com.ti.SIMPLELINK_CC32XX_SDK__2.40.01.01::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__1.40.00.42::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__2.10.00.04::com.ti.AWS_MSP432E4__2.10.00.04::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.3::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.6.3::com.ti.WATSON_MSP432E4__1.10.00.04::com.ti.WATSON_CC32XX__1.10.00.04::com.ti.SAIL__1.30.00.02::com.ti.AZURE_CC32XX__2.10.00.04::com.ti.AZURE_MSP432E4__2.10.00.04::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::c2000ware_software_package__1.00.06.00::digital_power_c2000ware_sdk_software_package__1.02.00.00::powerSUITE_software_package__2.03.00.00::msp430ware__3.80.06.03::com.ti.mmwave_industrial_toolbox__3.2.0::com.ti.mmwave_automotive_toolbox__2.4.7::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::tirtos_simplelink__2.13.01.09::sysbios__6.50.01.12::xdctools__3.51.01.18",
+    "overviewDescription": "<p>The Open On-Chip Debugger (OpenOCD) is an open source software development tool supporting the debugging and programming of embedded applications based on SimpleLink™ MCU devices. OpenOCD provides JTAG and Serial Wire Debug(SWD) access to SimpleLink devices from GNU Debugger (GDB) (or directly with Tool Command Language (TCL) scripts) as well as network interfaces (e.g. telnet, GDB remote server, TCL) for  the remote debugging of applications.</p><p>With the ability to use the JTAG debug interface for GDB debugging, Flash programming, Boundary scan testing or scripting, plus support for a variety of debug probes and Integrated Development Environments (IDEs), OpenOCD can optimize your debugging and flash programming experience.</p><p>To add SimpleLink devices and XDS110 probe support to OpenOCD, TI has developed a SimpleLink™ OpenOCD package containing all required files based on the OpenOCD mainline. The package contains also user configuration files (*.cfg) and all documentation needed to use the solution.  This package supports all devices from the SimpleLink portfolio: MSP432, CC32xx, CC26xx and CC13xx devices and the XDS110 debug probe natively allowing all SimpleLink LaunchPad kits to be supported.</p>",
+    "overviewImage": "tirex-product-tree/simplelink-devtools/.metadata/.tirex/img/OpenOCD.jpg",
+    "packageOrder": 0
+  }
+]

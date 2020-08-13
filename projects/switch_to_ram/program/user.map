@@ -1,0 +1,79 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000008008020 0x0000000000057fe0 xr
+CPU_STACK        0x0000000008000000 0x0000000000000800 rw
+KRAM             0x0000000008000800 0x0000000000000800 xrw
+RAM              0x0000000000000000 0x0000000000007000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD program/main.o
+
+.text           0x0000000000000000       0xfc
+                0x0000000000000000                . = ALIGN (0x4)
+ *(.init)
+ *(.text)
+ .text          0x0000000000000000       0xfc program/main.o
+                0x0000000000000000                main
+ *(.text*)
+ *(.glue_7)
+ .glue_7        0x00000000000000fc        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000000000fc        0x0 linker stubs
+ *(.eh_frame)
+                0x00000000000000fc                . = ALIGN (0x4)
+
+.vfp11_veneer   0x00000000000000fc        0x0
+ .vfp11_veneer  0x00000000000000fc        0x0 linker stubs
+
+.v4_bx          0x00000000000000fc        0x0
+ .v4_bx         0x00000000000000fc        0x0 linker stubs
+
+.iplt           0x00000000000000fc        0x0
+ .iplt          0x00000000000000fc        0x0 program/main.o
+
+.rel.dyn        0x00000000000000fc        0x0
+ .rel.iplt      0x00000000000000fc        0x0 program/main.o
+
+.rodata         0x0000000000000000        0x0
+                0x0000000000000000                . = ALIGN (0x4)
+ *(.rodata)
+ *(.rodata*)
+
+.data           0x00000000000000fc        0x0
+                0x00000000000000fc                . = ALIGN (0x4)
+ *(.data)
+ .data          0x00000000000000fc        0x0 program/main.o
+ *(.data*)
+OUTPUT(program/user.out elf32-bigarm)
+
+.igot.plt       0x00000000000000fc        0x0
+ .igot.plt      0x00000000000000fc        0x0 program/main.o
+
+.bss            0x00000000000000fc        0x0
+ .bss           0x00000000000000fc        0x0 program/main.o
+
+.comment        0x0000000000000000       0x31
+ .comment       0x0000000000000000       0x31 program/main.o
+                                         0x32 (size before relaxing)
+
+.ARM.attributes
+                0x0000000000000000       0x30
+ .ARM.attributes
+                0x0000000000000000       0x30 program/main.o
+
+.debug_line     0x0000000000000000       0x79
+ .debug_line    0x0000000000000000       0x79 program/main.o
+
+.debug_info     0x0000000000000000       0x6e
+ .debug_info    0x0000000000000000       0x6e program/main.o
+
+.debug_abbrev   0x0000000000000000       0x14
+ .debug_abbrev  0x0000000000000000       0x14 program/main.o
+
+.debug_aranges  0x0000000000000000       0x20
+ .debug_aranges
+                0x0000000000000000       0x20 program/main.o

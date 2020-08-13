@@ -1,0 +1,79 @@
+\hypertarget{rand_8h}{}\section{loader/include\+\_\+manual/rand.h File Reference}
+\label{rand_8h}\index{loader/include\+\_\+manual/rand.\+h@{loader/include\+\_\+manual/rand.\+h}}
+
+
+Header file for \hyperlink{rand_8c}{rand.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+Include dependency graph for rand.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{rand_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rand_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rand_8h_a96bf52a59be9b7960d1b9dc8a33b84e0}{rand\+\_\+set\+\_\+seed} (uint64\+\_\+t seed)
+\begin{DoxyCompactList}\small\item\em Sets a new seed value. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{rand_8h_ad01d704d38dc5481f003cbda5d15aff4}{rand\+\_\+get\+\_\+seed} (void)
+\item 
+uint32\+\_\+t \hyperlink{rand_8h_aae3f2cbdb77f6392c473d4adcbfddfbd}{rand\+\_\+custom} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{rand_8c}{rand.\+c}. 
+
+\begin{DoxyDate}{Date}
+19-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+Header file for \hyperlink{board__ctrl_8c}{board\+\_\+ctrl.\+c} with macros for board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rand_8h_aae3f2cbdb77f6392c473d4adcbfddfbd}\label{rand_8h_aae3f2cbdb77f6392c473d4adcbfddfbd}} 
+\index{rand.\+h@{rand.\+h}!rand\+\_\+custom@{rand\+\_\+custom}}
+\index{rand\+\_\+custom@{rand\+\_\+custom}!rand.\+h@{rand.\+h}}
+\subsubsection{\texorpdfstring{rand\+\_\+custom()}{rand\_custom()}}
+{\footnotesize\ttfamily uint32\+\_\+t rand\+\_\+custom (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns a random number \begin{DoxyReturn}{Returns}
+random number
+\end{DoxyReturn}
+Returns a pseudo-\/random number and changes the seed seed\+\_\+g \mbox{\Hypertarget{rand_8h_ad01d704d38dc5481f003cbda5d15aff4}\label{rand_8h_ad01d704d38dc5481f003cbda5d15aff4}} 
+\index{rand.\+h@{rand.\+h}!rand\+\_\+get\+\_\+seed@{rand\+\_\+get\+\_\+seed}}
+\index{rand\+\_\+get\+\_\+seed@{rand\+\_\+get\+\_\+seed}!rand.\+h@{rand.\+h}}
+\subsubsection{\texorpdfstring{rand\+\_\+get\+\_\+seed()}{rand\_get\_seed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rand\+\_\+get\+\_\+seed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the current seed value \begin{DoxyReturn}{Returns}
+current seed value
+\end{DoxyReturn}
+Gets the current seed value by returning seed\+\_\+g \mbox{\Hypertarget{rand_8h_a96bf52a59be9b7960d1b9dc8a33b84e0}\label{rand_8h_a96bf52a59be9b7960d1b9dc8a33b84e0}} 
+\index{rand.\+h@{rand.\+h}!rand\+\_\+set\+\_\+seed@{rand\+\_\+set\+\_\+seed}}
+\index{rand\+\_\+set\+\_\+seed@{rand\+\_\+set\+\_\+seed}!rand.\+h@{rand.\+h}}
+\subsubsection{\texorpdfstring{rand\+\_\+set\+\_\+seed()}{rand\_set\_seed()}}
+{\footnotesize\ttfamily void rand\+\_\+set\+\_\+seed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{new\+\_\+seed }\end{DoxyParamCaption})}
+
+
+
+Sets a new seed value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+seed} & New seed value\\
+\hline
+\end{DoxyParams}
+Sets a new seed value by setting seed\+\_\+g to {\ttfamily new\+\_\+seed} 

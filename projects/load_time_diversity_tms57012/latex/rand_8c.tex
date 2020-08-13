@@ -1,0 +1,86 @@
+\hypertarget{rand_8c}{}\section{loader/source\+\_\+manual/rand.c File Reference}
+\label{rand_8c}\index{loader/source\+\_\+manual/rand.\+c@{loader/source\+\_\+manual/rand.\+c}}
+
+
+Pseudo-\/random number generator source file.  
+
+
+{\ttfamily \#include \char`\"{}rand.\+h\char`\"{}}\newline
+Include dependency graph for rand.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{rand_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rand_8c_a59a2e849801645d8b64787c38fdbac0c}{rand\+\_\+set\+\_\+seed} (uint64\+\_\+t new\+\_\+seed)
+\begin{DoxyCompactList}\small\item\em Sets a new seed value. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{rand_8c_ad01d704d38dc5481f003cbda5d15aff4}{rand\+\_\+get\+\_\+seed} (void)
+\item 
+uint32\+\_\+t \hyperlink{rand_8c_aae3f2cbdb77f6392c473d4adcbfddfbd}{rand\+\_\+custom} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \hyperlink{rand_8c_a460eedd974ecf275a215184581317031}{seed\+\_\+g}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pseudo-\/random number generator source file. 
+
+\begin{DoxyDate}{Date}
+19-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+Linear congruential generator pseudo-\/random number generator source file. Uses the values P\+O\+S\+IX\mbox{[}21\mbox{]} \mbox{[}jm\mbox{]}rand48. Source of values\+: \href{https://en.wikipedia.org/wiki/Linear_congruential_generator}{\tt https\+://en.\+wikipedia.\+org/wiki/\+Linear\+\_\+congruential\+\_\+generator} 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rand_8c_aae3f2cbdb77f6392c473d4adcbfddfbd}\label{rand_8c_aae3f2cbdb77f6392c473d4adcbfddfbd}} 
+\index{rand.\+c@{rand.\+c}!rand\+\_\+custom@{rand\+\_\+custom}}
+\index{rand\+\_\+custom@{rand\+\_\+custom}!rand.\+c@{rand.\+c}}
+\subsubsection{\texorpdfstring{rand\+\_\+custom()}{rand\_custom()}}
+{\footnotesize\ttfamily uint32\+\_\+t rand\+\_\+custom (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns a random number \begin{DoxyReturn}{Returns}
+random number
+\end{DoxyReturn}
+Returns a pseudo-\/random number and changes the seed seed\+\_\+g \mbox{\Hypertarget{rand_8c_ad01d704d38dc5481f003cbda5d15aff4}\label{rand_8c_ad01d704d38dc5481f003cbda5d15aff4}} 
+\index{rand.\+c@{rand.\+c}!rand\+\_\+get\+\_\+seed@{rand\+\_\+get\+\_\+seed}}
+\index{rand\+\_\+get\+\_\+seed@{rand\+\_\+get\+\_\+seed}!rand.\+c@{rand.\+c}}
+\subsubsection{\texorpdfstring{rand\+\_\+get\+\_\+seed()}{rand\_get\_seed()}}
+{\footnotesize\ttfamily uint64\+\_\+t rand\+\_\+get\+\_\+seed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Gets the current seed value \begin{DoxyReturn}{Returns}
+current seed value
+\end{DoxyReturn}
+Gets the current seed value by returning seed\+\_\+g \mbox{\Hypertarget{rand_8c_a59a2e849801645d8b64787c38fdbac0c}\label{rand_8c_a59a2e849801645d8b64787c38fdbac0c}} 
+\index{rand.\+c@{rand.\+c}!rand\+\_\+set\+\_\+seed@{rand\+\_\+set\+\_\+seed}}
+\index{rand\+\_\+set\+\_\+seed@{rand\+\_\+set\+\_\+seed}!rand.\+c@{rand.\+c}}
+\subsubsection{\texorpdfstring{rand\+\_\+set\+\_\+seed()}{rand\_set\_seed()}}
+{\footnotesize\ttfamily void rand\+\_\+set\+\_\+seed (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{new\+\_\+seed }\end{DoxyParamCaption})}
+
+
+
+Sets a new seed value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+\_\+seed} & New seed value\\
+\hline
+\end{DoxyParams}
+Sets a new seed value by setting seed\+\_\+g to {\ttfamily new\+\_\+seed} 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{rand_8c_a460eedd974ecf275a215184581317031}\label{rand_8c_a460eedd974ecf275a215184581317031}} 
+\index{rand.\+c@{rand.\+c}!seed\+\_\+g@{seed\+\_\+g}}
+\index{seed\+\_\+g@{seed\+\_\+g}!rand.\+c@{rand.\+c}}
+\subsubsection{\texorpdfstring{seed\+\_\+g}{seed\_g}}
+{\footnotesize\ttfamily uint64\+\_\+t seed\+\_\+g}
+
+Stores the seed 

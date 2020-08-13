@@ -1,0 +1,98 @@
+\hypertarget{structdiv__data}{}\section{div\+\_\+data Struct Reference}
+\label{structdiv__data}\index{div\+\_\+data@{div\+\_\+data}}
+
+
+diversification data struct Stores all the data for program diversification  
+
+
+
+
+{\ttfamily \#include $<$diversity.\+h$>$}
+
+
+
+Collaboration diagram for div\+\_\+data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{structdiv__data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{structdiv__data_a925a744075f14451053bde1984307c2c}{mis\+\_\+code\+\_\+load\+\_\+offs} \mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{structdiv__data_a10a5d55d28a5659701b4d1df3660f693}{mis\+\_\+code\+\_\+size} \mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}
+\item 
+struct \hyperlink{structbt__entry}{bt\+\_\+entry} \hyperlink{structdiv__data_a47f872c1cea250ffe2772bd45fabc7f9}{bt} \mbox{[}\hyperlink{div__data_8h_ad92e5a361600001505e57ae60af38ce7}{B\+T\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+const uint32\+\_\+t $\ast$ \hyperlink{structdiv__data_ae09e403374ca5aaaf51c962a89d4541e}{code\+\_\+load}
+\item 
+uint32\+\_\+t $\ast$ \hyperlink{structdiv__data_a95226056db8734cc65b8b3800203a8c8}{code\+\_\+exec}
+\item 
+uint32\+\_\+t \hyperlink{structdiv__data_ac090dfe9fdda3553a7f2f2a0bfc5413b}{id\+\_\+to\+\_\+pos} \mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{structdiv__data_a33056572ecaf33c72d4400f33249193d}{pos\+\_\+to\+\_\+id} \mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{structdiv__data_a2b755a737f5de109bf25f908ec6ae4bd}{mis\+\_\+code\+\_\+exec\+\_\+offs} \mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+diversification data struct Stores all the data for program diversification 
+
+\subsection{Field Documentation}
+\mbox{\Hypertarget{structdiv__data_a47f872c1cea250ffe2772bd45fabc7f9}\label{structdiv__data_a47f872c1cea250ffe2772bd45fabc7f9}} 
+\index{div\+\_\+data@{div\+\_\+data}!bt@{bt}}
+\index{bt@{bt}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{bt}{bt}}
+{\footnotesize\ttfamily struct \hyperlink{structbt__entry}{bt\+\_\+entry} div\+\_\+data\+::bt\mbox{[}\hyperlink{div__data_8h_ad92e5a361600001505e57ae60af38ce7}{B\+T\+\_\+\+S\+I\+ZE}\mbox{]}}
+
+array storing branch table \mbox{\Hypertarget{structdiv__data_a95226056db8734cc65b8b3800203a8c8}\label{structdiv__data_a95226056db8734cc65b8b3800203a8c8}} 
+\index{div\+\_\+data@{div\+\_\+data}!code\+\_\+exec@{code\+\_\+exec}}
+\index{code\+\_\+exec@{code\+\_\+exec}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{code\+\_\+exec}{code\_exec}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ div\+\_\+data\+::code\+\_\+exec}
+
+address where the shuffled code will be loaded to and executed \mbox{\Hypertarget{structdiv__data_ae09e403374ca5aaaf51c962a89d4541e}\label{structdiv__data_ae09e403374ca5aaaf51c962a89d4541e}} 
+\index{div\+\_\+data@{div\+\_\+data}!code\+\_\+load@{code\+\_\+load}}
+\index{code\+\_\+load@{code\+\_\+load}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{code\+\_\+load}{code\_load}}
+{\footnotesize\ttfamily const uint32\+\_\+t$\ast$ div\+\_\+data\+::code\+\_\+load}
+
+address where the code is loaded from \mbox{\Hypertarget{structdiv__data_ac090dfe9fdda3553a7f2f2a0bfc5413b}\label{structdiv__data_ac090dfe9fdda3553a7f2f2a0bfc5413b}} 
+\index{div\+\_\+data@{div\+\_\+data}!id\+\_\+to\+\_\+pos@{id\+\_\+to\+\_\+pos}}
+\index{id\+\_\+to\+\_\+pos@{id\+\_\+to\+\_\+pos}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{id\+\_\+to\+\_\+pos}{id\_to\_pos}}
+{\footnotesize\ttfamily uint32\+\_\+t div\+\_\+data\+::id\+\_\+to\+\_\+pos\mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}}
+
+array mapping the M\+IS id to its M\+IS offset when executed \mbox{\Hypertarget{structdiv__data_a2b755a737f5de109bf25f908ec6ae4bd}\label{structdiv__data_a2b755a737f5de109bf25f908ec6ae4bd}} 
+\index{div\+\_\+data@{div\+\_\+data}!mis\+\_\+code\+\_\+exec\+\_\+offs@{mis\+\_\+code\+\_\+exec\+\_\+offs}}
+\index{mis\+\_\+code\+\_\+exec\+\_\+offs@{mis\+\_\+code\+\_\+exec\+\_\+offs}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{mis\+\_\+code\+\_\+exec\+\_\+offs}{mis\_code\_exec\_offs}}
+{\footnotesize\ttfamily uint32\+\_\+t div\+\_\+data\+::mis\+\_\+code\+\_\+exec\+\_\+offs\mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}}
+
+array mapping the M\+IS id to the offset of its first instruction when executed \mbox{\Hypertarget{structdiv__data_a925a744075f14451053bde1984307c2c}\label{structdiv__data_a925a744075f14451053bde1984307c2c}} 
+\index{div\+\_\+data@{div\+\_\+data}!mis\+\_\+code\+\_\+load\+\_\+offs@{mis\+\_\+code\+\_\+load\+\_\+offs}}
+\index{mis\+\_\+code\+\_\+load\+\_\+offs@{mis\+\_\+code\+\_\+load\+\_\+offs}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{mis\+\_\+code\+\_\+load\+\_\+offs}{mis\_code\_load\_offs}}
+{\footnotesize\ttfamily uint32\+\_\+t div\+\_\+data\+::mis\+\_\+code\+\_\+load\+\_\+offs\mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}}
+
+array storing M\+IS load offset of its first instruction \mbox{\Hypertarget{structdiv__data_a10a5d55d28a5659701b4d1df3660f693}\label{structdiv__data_a10a5d55d28a5659701b4d1df3660f693}} 
+\index{div\+\_\+data@{div\+\_\+data}!mis\+\_\+code\+\_\+size@{mis\+\_\+code\+\_\+size}}
+\index{mis\+\_\+code\+\_\+size@{mis\+\_\+code\+\_\+size}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{mis\+\_\+code\+\_\+size}{mis\_code\_size}}
+{\footnotesize\ttfamily uint32\+\_\+t div\+\_\+data\+::mis\+\_\+code\+\_\+size\mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}}
+
+array storing M\+IS code size in instructions \mbox{\Hypertarget{structdiv__data_a33056572ecaf33c72d4400f33249193d}\label{structdiv__data_a33056572ecaf33c72d4400f33249193d}} 
+\index{div\+\_\+data@{div\+\_\+data}!pos\+\_\+to\+\_\+id@{pos\+\_\+to\+\_\+id}}
+\index{pos\+\_\+to\+\_\+id@{pos\+\_\+to\+\_\+id}!div\+\_\+data@{div\+\_\+data}}
+\subsubsection{\texorpdfstring{pos\+\_\+to\+\_\+id}{pos\_to\_id}}
+{\footnotesize\ttfamily uint32\+\_\+t div\+\_\+data\+::pos\+\_\+to\+\_\+id\mbox{[}\hyperlink{div__data_8h_a3132ecd423d2111501409d7956aae527}{M\+I\+S\+\_\+\+A\+M\+O\+U\+NT}\mbox{]}}
+
+array mapping the M\+IS position when executed to the M\+IS id 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+loader/include\+\_\+manual/\hyperlink{diversity_8h}{diversity.\+h}\end{DoxyCompactItemize}

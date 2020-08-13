@@ -1,0 +1,111 @@
+\hypertarget{board__ctrl_8h}{}\section{loader/include\+\_\+manual/board\+\_\+ctrl.h File Reference}
+\label{board__ctrl_8h}\index{loader/include\+\_\+manual/board\+\_\+ctrl.\+h@{loader/include\+\_\+manual/board\+\_\+ctrl.\+h}}
+
+
+Header file for \hyperlink{board__ctrl_8c}{board\+\_\+ctrl.\+c} with macros for functions parameters.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{board__ctrl_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{board__ctrl_8h_a3fba17b735ab991e1c15f454f03cacd2}{R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}~0x5
+\item 
+\#define \hyperlink{board__ctrl_8h_a4423eaa452b4001214f0bff02424c74c}{F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}~0xA
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{board__ctrl_8h_a341d33c536d663703208ab568f7d1e0e}\label{board__ctrl_8h_a341d33c536d663703208ab568f7d1e0e}} 
+void \hyperlink{board__ctrl_8h_a341d33c536d663703208ab568f7d1e0e}{delay} (void)
+\begin{DoxyCompactList}\small\item\em simple delay function Simple delay function, counts to 0x\+F\+FF \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{board__ctrl_8h_a0dfe47f29d47fcb938599e11eb12164c}{board\+\_\+ctrl\+\_\+init\+\_\+eeprom} (void)
+\begin{DoxyCompactList}\small\item\em Initializes E\+E\+P\+R\+OM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{board__ctrl_8h_a346e4369d59c31d340d906f8ced4ddd8}\label{board__ctrl_8h_a346e4369d59c31d340d906f8ced4ddd8}} 
+void \hyperlink{board__ctrl_8h_a346e4369d59c31d340d906f8ced4ddd8}{board\+\_\+ctrl\+\_\+load\+\_\+seed\+\_\+from\+\_\+eeprom} (void)
+\begin{DoxyCompactList}\small\item\em loads seed from E\+E\+P\+R\+OM Loads seed from E\+E\+P\+R\+OM to seed\+\_\+g \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{board__ctrl_8h_a8cda48445025aaf141556b5c884b6fc8}\label{board__ctrl_8h_a8cda48445025aaf141556b5c884b6fc8}} 
+void \hyperlink{board__ctrl_8h_a8cda48445025aaf141556b5c884b6fc8}{board\+\_\+ctrl\+\_\+save\+\_\+seed\+\_\+to\+\_\+eeprom} (void)
+\begin{DoxyCompactList}\small\item\em saves seed to E\+E\+P\+R\+OM Saves seed\+\_\+g to E\+E\+P\+R\+OM \end{DoxyCompactList}\item 
+void \hyperlink{board__ctrl_8h_a45479fa2f0d84595716ca1e8d204c46c}{board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode} (int mode)
+\begin{DoxyCompactList}\small\item\em Switches the execution mode according to argument {\ttfamily mode}. \end{DoxyCompactList}\item 
+void \hyperlink{board__ctrl_8h_a6dff19d796bb05446d1abe988809a120}{board\+\_\+clear\+\_\+seed} ()
+\begin{DoxyCompactList}\small\item\em Sets the seed to zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{board__ctrl_8c}{board\+\_\+ctrl.\+c} with macros for functions parameters. 
+
+\begin{DoxyDate}{Date}
+19-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+Header file for \hyperlink{board__ctrl_8c}{board\+\_\+ctrl.\+c} with macros for board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{board__ctrl_8h_a4423eaa452b4001214f0bff02424c74c}\label{board__ctrl_8h_a4423eaa452b4001214f0bff02424c74c}} 
+\index{board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}!F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE@{F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}}
+\index{F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE@{F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}!board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}}
+\subsubsection{\texorpdfstring{F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}{FLASH\_EXEC\_MODE}}
+{\footnotesize\ttfamily \#define F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE~0xA}
+
+mode value to set execution mode to F\+L\+A\+SH \mbox{\Hypertarget{board__ctrl_8h_a3fba17b735ab991e1c15f454f03cacd2}\label{board__ctrl_8h_a3fba17b735ab991e1c15f454f03cacd2}} 
+\index{board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}!R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE@{R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}}
+\index{R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE@{R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}!board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}}
+\subsubsection{\texorpdfstring{R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE}{RAM\_EXEC\_MODE}}
+{\footnotesize\ttfamily \#define R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE~0x5}
+
+mode value to set execution mode to R\+AM 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{board__ctrl_8h_a6dff19d796bb05446d1abe988809a120}\label{board__ctrl_8h_a6dff19d796bb05446d1abe988809a120}} 
+\index{board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}!board\+\_\+clear\+\_\+seed@{board\+\_\+clear\+\_\+seed}}
+\index{board\+\_\+clear\+\_\+seed@{board\+\_\+clear\+\_\+seed}!board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}}
+\subsubsection{\texorpdfstring{board\+\_\+clear\+\_\+seed()}{board\_clear\_seed()}}
+{\footnotesize\ttfamily void board\+\_\+clear\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets the seed to zero. 
+
+Sets the seed to zero so that attackers cannot read it. \mbox{\Hypertarget{board__ctrl_8h_a0dfe47f29d47fcb938599e11eb12164c}\label{board__ctrl_8h_a0dfe47f29d47fcb938599e11eb12164c}} 
+\index{board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}!board\+\_\+ctrl\+\_\+init\+\_\+eeprom@{board\+\_\+ctrl\+\_\+init\+\_\+eeprom}}
+\index{board\+\_\+ctrl\+\_\+init\+\_\+eeprom@{board\+\_\+ctrl\+\_\+init\+\_\+eeprom}!board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}}
+\subsubsection{\texorpdfstring{board\+\_\+ctrl\+\_\+init\+\_\+eeprom()}{board\_ctrl\_init\_eeprom()}}
+{\footnotesize\ttfamily uint16\+\_\+t board\+\_\+ctrl\+\_\+init\+\_\+eeprom (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes E\+E\+P\+R\+OM. 
+
+\begin{DoxyReturn}{Returns}
+status code T\+I\+\_\+\+Fee\+Module\+Status\+Type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{board__ctrl_8h_a45479fa2f0d84595716ca1e8d204c46c}\label{board__ctrl_8h_a45479fa2f0d84595716ca1e8d204c46c}} 
+\index{board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}!board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode@{board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode}}
+\index{board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode@{board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode}!board\+\_\+ctrl.\+h@{board\+\_\+ctrl.\+h}}
+\subsubsection{\texorpdfstring{board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode()}{board\_ctrl\_switch\_execution\_mode()}}
+{\footnotesize\ttfamily void board\+\_\+ctrl\+\_\+switch\+\_\+execution\+\_\+mode (\begin{DoxyParamCaption}\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Switches the execution mode according to argument {\ttfamily mode}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & Either R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE or F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE\\
+\hline
+\end{DoxyParams}
+Switches the execution mode to {\ttfamily mode} and resets the C\+PU. {\ttfamily mode\+:} 
+\begin{DoxyItemize}
+\item R\+A\+M\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE\+: execution from R\+AM with R\+AM starting at 0x00000000
+\item F\+L\+A\+S\+H\+\_\+\+E\+X\+E\+C\+\_\+\+M\+O\+DE\+: execution from F\+L\+A\+SH with F\+L\+A\+SH starting at 0x00000000 
+\end{DoxyItemize}

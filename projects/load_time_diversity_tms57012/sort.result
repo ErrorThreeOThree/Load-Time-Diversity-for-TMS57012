@@ -1,0 +1,2934 @@
+WCET-aware diversity.
+PROG:program/pre_analysis/sort.out FACTOR: 1.0 HEURISTIC: true
+running transformer control.RunTimeMeasurement$
+running transformer control.ASMParser$
+section name extract: [	.text]->[.text]
+start section .text
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_2)
+Jump: (	b	.LBB0_1)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_2)
+Jump: (	bl	bubble_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_4)
+Jump: (	b	.LBB0_3)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_4)
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_6)
+Jump: (	b	.LBB0_5)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_6)
+Jump: (	bl	insertion_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_8)
+Jump: (	b	.LBB0_7)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_8)
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_10)
+Jump: (	b	.LBB0_9)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_10)
+Jump: (	bl	selection_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_12)
+Jump: (	b	.LBB0_11)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_12)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB1_1)
+Jump: (	bhs	.LBB1_4)
+Jump: (	b	.LBB1_2)
+Jump: (	b	.LBB1_3)
+Jump: (	b	.LBB1_1)
+Jump: (	b	.LBB2_1)
+Jump: (	bhs	.LBB2_6)
+Jump: (	b	.LBB2_2)
+Jump: (	beq	.LBB2_4)
+Jump: (	b	.LBB2_3)
+Jump: (	b	.LBB2_7)
+Jump: (	b	.LBB2_5)
+Jump: (	b	.LBB2_1)
+Jump: (	b	.LBB2_7)
+Jump: (	b	.LBB3_1)
+Jump: (	b	.LBB3_1)
+Jump: (	b	.LBB4_1)
+Jump: (	b	.LBB4_2)
+Jump: (	bhs	.LBB4_7)
+Jump: (	b	.LBB4_3)
+Jump: (	bls	.LBB4_5)
+Jump: (	b	.LBB4_4)
+Jump: (	b	.LBB4_5)
+Jump: (	b	.LBB4_6)
+Jump: (	b	.LBB4_2)
+Jump: (	b	.LBB4_8)
+Jump: (	beq	.LBB4_1)
+Jump: (	b	.LBB4_9)
+Jump: (	b	.LBB5_1)
+Jump: (	bhs	.LBB5_8)
+Jump: (	b	.LBB5_2)
+Jump: (	b	.LBB5_3)
+Jump: (	blt	.LBB5_5)
+Jump: (	b	.LBB5_4)
+Jump: (	b	.LBB5_5)
+Jump: (	beq	.LBB5_7)
+Jump: (	b	.LBB5_6)
+Jump: (	b	.LBB5_3)
+Jump: (	b	.LBB5_1)
+Jump: (	b	.LBB6_1)
+Jump: (	bhs	.LBB6_10)
+Jump: (	b	.LBB6_2)
+Jump: (	b	.LBB6_3)
+Jump: (	bhs	.LBB6_8)
+Jump: (	b	.LBB6_4)
+Jump: (	bhs	.LBB6_6)
+Jump: (	b	.LBB6_5)
+Jump: (	b	.LBB6_6)
+Jump: (	b	.LBB6_7)
+Jump: (	b	.LBB6_3)
+Jump: (	b	.LBB6_9)
+Jump: (	b	.LBB6_1)
+section name extract: [	.section	.rodata,"a",%progbits]->[.rodata]
+start section .rodata
+section name extract: [	.section	.debug_str,"MS",%progbits,1]->[.debug]
+start section .debug
+section name extract: [	.section	.debug_abbrev,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_info,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_ranges,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_macinfo,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubnames,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubtypes,"",%progbits]->[.debug]
+section name extract: [	.section	".note.GNU-stack","",%progbits]->[]
+start section 
+section name extract: [	.section	.debug_line,"",%progbits]->[.debug]
+start section .debug
+running transformer control.ASMParserAUXFiles$
+aux files 
+aux file 
+running transformer control.PaddingInsertionTransformer$
+ERROR: maxpad parameter must be integer
+running transformer control.StartAdressRetriever$
+arm-linux-gnueabi-objdump -D program/pre_analysis/sort.out
+Disassembly of section .text:
+
+
+section string 00000100
+section start .text: 256
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitMISSizeTransformer$
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitBBSizeTransformer$
+max bb size0
+running transformer control.LitPoolTransformer$
+List()
+running transformer control.ASMFileWriter$
+running transformer control.ASCompileTransformer$
+arm-linux-gnueabi-gcc -static -nostdlib -g0 -O0 --entry main --entry main ./program/analysis/sort.s -o ./program/analysis/sort
+running transformer control.AddressInsertionTransformer$
+running transformer control.StatisticsTransformer$
+big blocks: 66
+instructions: 438
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+running transformer control.MISSerializerTransformer$
+main: MIS ID #0
+.Lfunc_begin0: MIS ID #0
+.Ltmp0: MIS ID #0
+.Ltmp1: MIS ID #0
+.Ltmp2: MIS ID #0
+.LBB0_1: MIS ID #1
+.Ltmp3: MIS ID #1
+.Ltmp4: MIS ID #2
+.LBB0_2: MIS ID #2
+.Ltmp5: MIS ID #2
+.Ltmp6: MIS ID #2
+.LBB0_3: MIS ID #3
+.Ltmp7: MIS ID #3
+.Ltmp8: MIS ID #4
+.LBB0_4: MIS ID #4
+.Ltmp9: MIS ID #4
+.Ltmp10: MIS ID #4
+.LBB0_5: MIS ID #5
+.Ltmp11: MIS ID #5
+.Ltmp12: MIS ID #6
+.LBB0_6: MIS ID #6
+.Ltmp13: MIS ID #6
+.Ltmp14: MIS ID #6
+.LBB0_7: MIS ID #7
+.Ltmp15: MIS ID #7
+.Ltmp16: MIS ID #8
+.LBB0_8: MIS ID #8
+.Ltmp17: MIS ID #8
+.Ltmp18: MIS ID #8
+.LBB0_9: MIS ID #9
+.Ltmp19: MIS ID #9
+.Ltmp20: MIS ID #10
+.LBB0_10: MIS ID #10
+.Ltmp21: MIS ID #10
+.Ltmp22: MIS ID #10
+.LBB0_11: MIS ID #11
+.Ltmp23: MIS ID #11
+.Ltmp24: MIS ID #12
+.LBB0_12: MIS ID #12
+.Ltmp25: MIS ID #13
+.Lfunc_end0: MIS ID #13
+array_copy: MIS ID #13
+.Lfunc_begin1: MIS ID #13
+.Ltmp26: MIS ID #13
+.LBB1_1: MIS ID #14
+.Ltmp27: MIS ID #14
+.Ltmp28: MIS ID #14
+.LBB1_2: MIS ID #15
+.Ltmp29: MIS ID #15
+.Ltmp30: MIS ID #16
+.LBB1_3: MIS ID #16
+.Ltmp31: MIS ID #17
+.LBB1_4: MIS ID #17
+.Ltmp32: MIS ID #18
+.Lfunc_end1: MIS ID #18
+array_eq: MIS ID #18
+.Lfunc_begin2: MIS ID #18
+.Ltmp33: MIS ID #18
+.LBB2_1: MIS ID #19
+.Ltmp34: MIS ID #19
+.Ltmp35: MIS ID #19
+.LBB2_2: MIS ID #20
+.Ltmp36: MIS ID #20
+.Ltmp37: MIS ID #20
+.LBB2_3: MIS ID #21
+.Ltmp38: MIS ID #21
+.Ltmp39: MIS ID #22
+.LBB2_4: MIS ID #22
+.Ltmp40: MIS ID #23
+.LBB2_5: MIS ID #23
+.Ltmp41: MIS ID #24
+.LBB2_6: MIS ID #24
+.LBB2_7: MIS ID #25
+.Ltmp42: MIS ID #26
+.Lfunc_end2: MIS ID #26
+sys_exit: MIS ID #26
+.Lfunc_begin3: MIS ID #26
+.Ltmp43: MIS ID #26
+.LBB3_1: MIS ID #27
+.Ltmp44: MIS ID #28
+.Lfunc_end3: MIS ID #28
+bubble_sort: MIS ID #28
+.Lfunc_begin4: MIS ID #28
+.Ltmp45: MIS ID #28
+.LBB4_1: MIS ID #29
+.Ltmp46: MIS ID #29
+.Ltmp47: MIS ID #29
+.LBB4_2: MIS ID #30
+.Ltmp48: MIS ID #30
+.Ltmp49: MIS ID #30
+.LBB4_3: MIS ID #31
+.Ltmp50: MIS ID #31
+.Ltmp51: MIS ID #31
+.LBB4_4: MIS ID #32
+.Ltmp52: MIS ID #32
+.Ltmp53: MIS ID #33
+.LBB4_5: MIS ID #33
+.Ltmp54: MIS ID #34
+.LBB4_6: MIS ID #34
+.Ltmp55: MIS ID #35
+.LBB4_7: MIS ID #35
+.Ltmp56: MIS ID #36
+.LBB4_8: MIS ID #36
+.Ltmp57: MIS ID #36
+.Ltmp58: MIS ID #37
+.LBB4_9: MIS ID #37
+.Ltmp59: MIS ID #38
+.Lfunc_end4: MIS ID #38
+insertion_sort: MIS ID #38
+.Lfunc_begin5: MIS ID #38
+.Ltmp60: MIS ID #38
+.LBB5_1: MIS ID #39
+.LBB5_2: MIS ID #40
+.Ltmp61: MIS ID #40
+.LBB5_3: MIS ID #41
+.LBB5_4: MIS ID #42
+.LBB5_5: MIS ID #43
+.LBB5_6: MIS ID #44
+.Ltmp62: MIS ID #44
+.Ltmp63: MIS ID #44
+.LBB5_7: MIS ID #45
+.Ltmp64: MIS ID #45
+.LBB5_8: MIS ID #46
+.Ltmp65: MIS ID #47
+.Lfunc_end5: MIS ID #47
+selection_sort: MIS ID #47
+.Lfunc_begin6: MIS ID #47
+.Ltmp66: MIS ID #47
+.LBB6_1: MIS ID #48
+.Ltmp67: MIS ID #48
+.Ltmp68: MIS ID #48
+.LBB6_2: MIS ID #49
+.Ltmp69: MIS ID #49
+.Ltmp70: MIS ID #49
+.LBB6_3: MIS ID #50
+.Ltmp71: MIS ID #50
+.Ltmp72: MIS ID #50
+.LBB6_4: MIS ID #51
+.Ltmp73: MIS ID #51
+.Ltmp74: MIS ID #51
+.LBB6_5: MIS ID #52
+.Ltmp75: MIS ID #52
+.Ltmp76: MIS ID #53
+.LBB6_6: MIS ID #53
+.Ltmp77: MIS ID #54
+.LBB6_7: MIS ID #54
+.Ltmp78: MIS ID #55
+.LBB6_8: MIS ID #55
+.Ltmp79: MIS ID #56
+.LBB6_9: MIS ID #56
+.Ltmp80: MIS ID #57
+.LBB6_10: MIS ID #57
+running transformer control.MISSetShuffleSectionsTransformer$
+mis: -1 is shuffable
+mis: 0 is shuffable
+mis: 1 is shuffable
+mis: 2 is shuffable
+mis: 3 is shuffable
+mis: 4 is shuffable
+mis: 5 is shuffable
+mis: 6 is shuffable
+mis: 7 is shuffable
+mis: 8 is shuffable
+mis: 9 is shuffable
+mis: 10 is shuffable
+mis: 11 is shuffable
+mis: 12 is shuffable
+mis: 13 is shuffable
+mis: 14 is shuffable
+mis: 15 is shuffable
+mis: 16 is shuffable
+mis: 17 is shuffable
+mis: 18 is shuffable
+mis: 19 is shuffable
+mis: 20 is shuffable
+mis: 21 is shuffable
+mis: 22 is shuffable
+mis: 23 is shuffable
+mis: 24 is shuffable
+mis: 25 is shuffable
+mis: 26 is shuffable
+mis: 27 is shuffable
+mis: 28 is shuffable
+mis: 29 is shuffable
+mis: 30 is shuffable
+mis: 31 is shuffable
+mis: 32 is shuffable
+mis: 33 is shuffable
+mis: 34 is shuffable
+mis: 35 is shuffable
+mis: 36 is shuffable
+mis: 37 is shuffable
+mis: 38 is shuffable
+mis: 39 is shuffable
+mis: 40 is shuffable
+mis: 41 is shuffable
+mis: 42 is shuffable
+mis: 43 is shuffable
+mis: 44 is shuffable
+mis: 45 is shuffable
+mis: 46 is shuffable
+mis: 47 is shuffable
+mis: 48 is shuffable
+mis: 49 is shuffable
+mis: 50 is shuffable
+mis: 51 is shuffable
+mis: 52 is shuffable
+mis: 53 is shuffable
+mis: 54 is shuffable
+mis: 55 is shuffable
+mis: 56 is shuffable
+mis: 57 is shuffable
+mis: -1 is shuffable
+running transformer control.MISBranchCollectorTransformer$
+Instruction @304 - both branch instruction (MIS #0) and target (MIS #13) can change location
+Instruction @320 - both branch instruction (MIS #0) and target (MIS #18) can change location
+Instruction @336 - both branch instruction (MIS #0) and target (MIS #2) can change location
+Instruction @340 - both branch instruction (MIS #0) and target (MIS #1) can change location
+Instruction @372 - both branch instruction (MIS #1) and target (MIS #26) can change location
+Instruction @376 - both branch instruction (MIS #1) and target (MIS #2) can change location
+Instruction @396 - both branch instruction (MIS #2) and target (MIS #28) can change location
+Instruction @416 - both branch instruction (MIS #2) and target (MIS #18) can change location
+Instruction @432 - both branch instruction (MIS #2) and target (MIS #4) can change location
+Instruction @436 - both branch instruction (MIS #2) and target (MIS #3) can change location
+Instruction @468 - both branch instruction (MIS #3) and target (MIS #26) can change location
+Instruction @472 - both branch instruction (MIS #3) and target (MIS #4) can change location
+Instruction @504 - both branch instruction (MIS #4) and target (MIS #13) can change location
+Instruction @520 - both branch instruction (MIS #4) and target (MIS #18) can change location
+Instruction @536 - both branch instruction (MIS #4) and target (MIS #6) can change location
+Instruction @540 - both branch instruction (MIS #4) and target (MIS #5) can change location
+Instruction @572 - both branch instruction (MIS #5) and target (MIS #26) can change location
+Instruction @576 - both branch instruction (MIS #5) and target (MIS #6) can change location
+Instruction @596 - both branch instruction (MIS #6) and target (MIS #38) can change location
+Instruction @616 - both branch instruction (MIS #6) and target (MIS #18) can change location
+Instruction @632 - both branch instruction (MIS #6) and target (MIS #8) can change location
+Instruction @636 - both branch instruction (MIS #6) and target (MIS #7) can change location
+Instruction @668 - both branch instruction (MIS #7) and target (MIS #26) can change location
+Instruction @672 - both branch instruction (MIS #7) and target (MIS #8) can change location
+Instruction @704 - both branch instruction (MIS #8) and target (MIS #13) can change location
+Instruction @720 - both branch instruction (MIS #8) and target (MIS #18) can change location
+Instruction @736 - both branch instruction (MIS #8) and target (MIS #10) can change location
+Instruction @740 - both branch instruction (MIS #8) and target (MIS #9) can change location
+Instruction @772 - both branch instruction (MIS #9) and target (MIS #26) can change location
+Instruction @776 - both branch instruction (MIS #9) and target (MIS #10) can change location
+Instruction @796 - both branch instruction (MIS #10) and target (MIS #47) can change location
+Instruction @816 - both branch instruction (MIS #10) and target (MIS #18) can change location
+Instruction @832 - both branch instruction (MIS #10) and target (MIS #12) can change location
+Instruction @836 - both branch instruction (MIS #10) and target (MIS #11) can change location
+Instruction @868 - both branch instruction (MIS #11) and target (MIS #26) can change location
+Instruction @872 - both branch instruction (MIS #11) and target (MIS #12) can change location
+Instruction @896 - both branch instruction (MIS #12) and target (MIS #26) can change location
+Instruction @968 - both branch instruction (MIS #13) and target (MIS #14) can change location
+Instruction @984 - both branch instruction (MIS #14) and target (MIS #17) can change location
+Instruction @988 - both branch instruction (MIS #14) and target (MIS #15) can change location
+Instruction @1012 - both branch instruction (MIS #15) and target (MIS #16) can change location
+Instruction @1028 - both branch instruction (MIS #16) and target (MIS #14) can change location
+Instruction @1096 - both branch instruction (MIS #18) and target (MIS #19) can change location
+Instruction @1112 - both branch instruction (MIS #19) and target (MIS #24) can change location
+Instruction @1116 - both branch instruction (MIS #19) and target (MIS #20) can change location
+Instruction @1144 - both branch instruction (MIS #20) and target (MIS #22) can change location
+Instruction @1148 - both branch instruction (MIS #20) and target (MIS #21) can change location
+Instruction @1160 - both branch instruction (MIS #21) and target (MIS #25) can change location
+Instruction @1164 - both branch instruction (MIS #22) and target (MIS #23) can change location
+Instruction @1180 - both branch instruction (MIS #23) and target (MIS #19) can change location
+Instruction @1192 - both branch instruction (MIS #24) and target (MIS #25) can change location
+Instruction @1268 - both branch instruction (MIS #26) and target (MIS #27) can change location
+Instruction @1304 - both branch instruction (MIS #28) and target (MIS #29) can change location
+Instruction @1324 - both branch instruction (MIS #29) and target (MIS #30) can change location
+Instruction @1340 - both branch instruction (MIS #30) and target (MIS #35) can change location
+Instruction @1344 - both branch instruction (MIS #30) and target (MIS #31) can change location
+Instruction @1368 - both branch instruction (MIS #31) and target (MIS #33) can change location
+Instruction @1372 - both branch instruction (MIS #31) and target (MIS #32) can change location
+Instruction @1440 - both branch instruction (MIS #32) and target (MIS #33) can change location
+Instruction @1444 - both branch instruction (MIS #33) and target (MIS #34) can change location
+Instruction @1460 - both branch instruction (MIS #34) and target (MIS #30) can change location
+Instruction @1476 - both branch instruction (MIS #35) and target (MIS #36) can change location
+Instruction @1488 - both branch instruction (MIS #36) and target (MIS #29) can change location
+Instruction @1492 - both branch instruction (MIS #36) and target (MIS #37) can change location
+Instruction @1540 - both branch instruction (MIS #38) and target (MIS #39) can change location
+Instruction @1556 - both branch instruction (MIS #39) and target (MIS #46) can change location
+Instruction @1560 - both branch instruction (MIS #39) and target (MIS #40) can change location
+Instruction @1592 - both branch instruction (MIS #40) and target (MIS #41) can change location
+Instruction @1612 - both branch instruction (MIS #41) and target (MIS #43) can change location
+Instruction @1616 - both branch instruction (MIS #41) and target (MIS #42) can change location
+Instruction @1652 - both branch instruction (MIS #42) and target (MIS #43) can change location
+Instruction @1664 - both branch instruction (MIS #43) and target (MIS #45) can change location
+Instruction @1668 - both branch instruction (MIS #43) and target (MIS #44) can change location
+Instruction @1700 - both branch instruction (MIS #44) and target (MIS #41) can change location
+Instruction @1736 - both branch instruction (MIS #45) and target (MIS #39) can change location
+Instruction @1784 - both branch instruction (MIS #47) and target (MIS #48) can change location
+Instruction @1808 - both branch instruction (MIS #48) and target (MIS #57) can change location
+Instruction @1812 - both branch instruction (MIS #48) and target (MIS #49) can change location
+Instruction @1836 - both branch instruction (MIS #49) and target (MIS #50) can change location
+Instruction @1852 - both branch instruction (MIS #50) and target (MIS #55) can change location
+Instruction @1856 - both branch instruction (MIS #50) and target (MIS #51) can change location
+Instruction @1884 - both branch instruction (MIS #51) and target (MIS #53) can change location
+Instruction @1888 - both branch instruction (MIS #51) and target (MIS #52) can change location
+Instruction @1900 - both branch instruction (MIS #52) and target (MIS #53) can change location
+Instruction @1904 - both branch instruction (MIS #53) and target (MIS #54) can change location
+Instruction @1920 - both branch instruction (MIS #54) and target (MIS #50) can change location
+Instruction @1976 - both branch instruction (MIS #55) and target (MIS #56) can change location
+Instruction @1992 - both branch instruction (MIS #56) and target (MIS #48) can change location
+running transformer control.DiversificationBinaryDump$
+dumping diversification binary infos
+
+
+130critical Istr: t:array_copy labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+140critical Istr: t:array_eq labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+150critical Istr: t:.LBB0_2 labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+154critical Istr: t:.LBB0_1 labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+174critical Istr: t:sys_exit labels: 
+.LBB0_1
+.Ltmp3
+
+
+178critical Istr: t:.LBB0_2 labels: 
+.LBB0_1
+.Ltmp3
+
+
+18ccritical Istr: t:bubble_sort labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1a0critical Istr: t:array_eq labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1b0critical Istr: t:.LBB0_4 labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1b4critical Istr: t:.LBB0_3 labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1d4critical Istr: t:sys_exit labels: 
+.LBB0_3
+.Ltmp7
+
+
+1d8critical Istr: t:.LBB0_4 labels: 
+.LBB0_3
+.Ltmp7
+
+
+1f8critical Istr: t:array_copy labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+208critical Istr: t:array_eq labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+218critical Istr: t:.LBB0_6 labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+21ccritical Istr: t:.LBB0_5 labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+23ccritical Istr: t:sys_exit labels: 
+.LBB0_5
+.Ltmp11
+
+
+240critical Istr: t:.LBB0_6 labels: 
+.LBB0_5
+.Ltmp11
+
+
+254critical Istr: t:insertion_sort labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+268critical Istr: t:array_eq labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+278critical Istr: t:.LBB0_8 labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+27ccritical Istr: t:.LBB0_7 labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+29ccritical Istr: t:sys_exit labels: 
+.LBB0_7
+.Ltmp15
+
+
+2a0critical Istr: t:.LBB0_8 labels: 
+.LBB0_7
+.Ltmp15
+
+
+2c0critical Istr: t:array_copy labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2d0critical Istr: t:array_eq labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2e0critical Istr: t:.LBB0_10 labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2e4critical Istr: t:.LBB0_9 labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+304critical Istr: t:sys_exit labels: 
+.LBB0_9
+.Ltmp19
+
+
+308critical Istr: t:.LBB0_10 labels: 
+.LBB0_9
+.Ltmp19
+
+
+31ccritical Istr: t:selection_sort labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+330critical Istr: t:array_eq labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+340critical Istr: t:.LBB0_12 labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+344critical Istr: t:.LBB0_11 labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+364critical Istr: t:sys_exit labels: 
+.LBB0_11
+.Ltmp23
+
+
+368critical Istr: t:.LBB0_12 labels: 
+.LBB0_11
+.Ltmp23
+
+
+380critical Istr: t:sys_exit labels: 
+.Ltmp24
+.LBB0_12
+
+
+3c8critical Istr: t:.LBB1_1 labels: 
+.Ltmp25
+.Lfunc_end0
+array_copy
+.Lfunc_begin1
+.Ltmp26
+
+
+3d8critical Istr: t:.LBB1_4 labels: 
+.LBB1_1
+.Ltmp27
+.Ltmp28
+
+
+3dccritical Istr: t:.LBB1_2 labels: 
+.LBB1_1
+.Ltmp27
+.Ltmp28
+
+
+3f4critical Istr: t:.LBB1_3 labels: 
+.LBB1_2
+.Ltmp29
+
+
+404critical Istr: t:.LBB1_1 labels: 
+.Ltmp30
+.LBB1_3
+
+
+448critical Istr: t:.LBB2_1 labels: 
+.Ltmp32
+.Lfunc_end1
+array_eq
+.Lfunc_begin2
+.Ltmp33
+
+
+458critical Istr: t:.LBB2_6 labels: 
+.LBB2_1
+.Ltmp34
+.Ltmp35
+
+
+45ccritical Istr: t:.LBB2_2 labels: 
+.LBB2_1
+.Ltmp34
+.Ltmp35
+
+
+478critical Istr: t:.LBB2_4 labels: 
+.LBB2_2
+.Ltmp36
+.Ltmp37
+
+
+47ccritical Istr: t:.LBB2_3 labels: 
+.LBB2_2
+.Ltmp36
+.Ltmp37
+
+
+488critical Istr: t:.LBB2_7 labels: 
+.LBB2_3
+.Ltmp38
+
+
+48ccritical Istr: t:.LBB2_5 labels: 
+.Ltmp39
+.LBB2_4
+
+
+49ccritical Istr: t:.LBB2_1 labels: 
+.Ltmp40
+.LBB2_5
+
+
+4a8critical Istr: t:.LBB2_7 labels: 
+.Ltmp41
+.LBB2_6
+
+
+4f4critical Istr: t:.LBB3_1 labels: 
+.Ltmp42
+.Lfunc_end2
+sys_exit
+.Lfunc_begin3
+.Ltmp43
+
+
+518critical Istr: t:.LBB4_1 labels: 
+.Ltmp44
+.Lfunc_end3
+bubble_sort
+.Lfunc_begin4
+.Ltmp45
+
+
+52ccritical Istr: t:.LBB4_2 labels: 
+.LBB4_1
+.Ltmp46
+.Ltmp47
+
+
+53ccritical Istr: t:.LBB4_7 labels: 
+.LBB4_2
+.Ltmp48
+.Ltmp49
+
+
+540critical Istr: t:.LBB4_3 labels: 
+.LBB4_2
+.Ltmp48
+.Ltmp49
+
+
+558critical Istr: t:.LBB4_5 labels: 
+.LBB4_3
+.Ltmp50
+.Ltmp51
+
+
+55ccritical Istr: t:.LBB4_4 labels: 
+.LBB4_3
+.Ltmp50
+.Ltmp51
+
+
+5a0critical Istr: t:.LBB4_5 labels: 
+.LBB4_4
+.Ltmp52
+
+
+5a4critical Istr: t:.LBB4_6 labels: 
+.Ltmp53
+.LBB4_5
+
+
+5b4critical Istr: t:.LBB4_2 labels: 
+.Ltmp54
+.LBB4_6
+
+
+5c4critical Istr: t:.LBB4_8 labels: 
+.Ltmp55
+.LBB4_7
+
+
+5d0critical Istr: t:.LBB4_1 labels: 
+.Ltmp56
+.LBB4_8
+.Ltmp57
+
+
+5d4critical Istr: t:.LBB4_9 labels: 
+.Ltmp56
+.LBB4_8
+.Ltmp57
+
+
+604critical Istr: t:.LBB5_1 labels: 
+.Ltmp59
+.Lfunc_end4
+insertion_sort
+.Lfunc_begin5
+.Ltmp60
+
+
+614critical Istr: t:.LBB5_8 labels: 
+.LBB5_1
+
+
+618critical Istr: t:.LBB5_2 labels: 
+.LBB5_1
+
+
+638critical Istr: t:.LBB5_3 labels: 
+.LBB5_2
+.Ltmp61
+
+
+64ccritical Istr: t:.LBB5_5 labels: 
+.LBB5_3
+
+
+650critical Istr: t:.LBB5_4 labels: 
+.LBB5_3
+
+
+674critical Istr: t:.LBB5_5 labels: 
+.LBB5_4
+
+
+680critical Istr: t:.LBB5_7 labels: 
+.LBB5_5
+
+
+684critical Istr: t:.LBB5_6 labels: 
+.LBB5_5
+
+
+6a4critical Istr: t:.LBB5_3 labels: 
+.LBB5_6
+.Ltmp62
+.Ltmp63
+
+
+6c8critical Istr: t:.LBB5_1 labels: 
+.LBB5_7
+.Ltmp64
+
+
+6f8critical Istr: t:.LBB6_1 labels: 
+.Ltmp65
+.Lfunc_end5
+selection_sort
+.Lfunc_begin6
+.Ltmp66
+
+
+710critical Istr: t:.LBB6_10 labels: 
+.LBB6_1
+.Ltmp67
+.Ltmp68
+
+
+714critical Istr: t:.LBB6_2 labels: 
+.LBB6_1
+.Ltmp67
+.Ltmp68
+
+
+72ccritical Istr: t:.LBB6_3 labels: 
+.LBB6_2
+.Ltmp69
+.Ltmp70
+
+
+73ccritical Istr: t:.LBB6_8 labels: 
+.LBB6_3
+.Ltmp71
+.Ltmp72
+
+
+740critical Istr: t:.LBB6_4 labels: 
+.LBB6_3
+.Ltmp71
+.Ltmp72
+
+
+75ccritical Istr: t:.LBB6_6 labels: 
+.LBB6_4
+.Ltmp73
+.Ltmp74
+
+
+760critical Istr: t:.LBB6_5 labels: 
+.LBB6_4
+.Ltmp73
+.Ltmp74
+
+
+76ccritical Istr: t:.LBB6_6 labels: 
+.LBB6_5
+.Ltmp75
+
+
+770critical Istr: t:.LBB6_7 labels: 
+.Ltmp76
+.LBB6_6
+
+
+780critical Istr: t:.LBB6_3 labels: 
+.Ltmp77
+.LBB6_7
+
+
+7b8critical Istr: t:.LBB6_9 labels: 
+.Ltmp78
+.LBB6_8
+
+
+7c8critical Istr: t:.LBB6_1 labels: 
+.Ltmp79
+.LBB6_9
+creating headerfile with data sizes in diversification binary infos
+running transformer control.RunTimeMeasurement$
+Time measured: 434ms
+running transformer control.StatisticsTransformer$
+big blocks: 66
+instructions: 438
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+WCET-aware diversity.
+PROG:program/pre_analysis/sort.out FACTOR: 1.0 HEURISTIC: true
+running transformer control.RunTimeMeasurement$
+running transformer control.ASMParser$
+section name extract: [	.text]->[.text]
+start section .text
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_2)
+Jump: (	b	.LBB0_1)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_2)
+Jump: (	bl	bubble_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_4)
+Jump: (	b	.LBB0_3)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_4)
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_6)
+Jump: (	b	.LBB0_5)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_6)
+Jump: (	bl	insertion_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_8)
+Jump: (	b	.LBB0_7)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_8)
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_10)
+Jump: (	b	.LBB0_9)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_10)
+Jump: (	bl	selection_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_12)
+Jump: (	b	.LBB0_11)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_12)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB1_1)
+Jump: (	bhs	.LBB1_4)
+Jump: (	b	.LBB1_2)
+Jump: (	b	.LBB1_3)
+Jump: (	b	.LBB1_1)
+Jump: (	b	.LBB2_1)
+Jump: (	bhs	.LBB2_6)
+Jump: (	b	.LBB2_2)
+Jump: (	beq	.LBB2_4)
+Jump: (	b	.LBB2_3)
+Jump: (	b	.LBB2_7)
+Jump: (	b	.LBB2_5)
+Jump: (	b	.LBB2_1)
+Jump: (	b	.LBB2_7)
+Jump: (	b	.LBB3_1)
+Jump: (	b	.LBB3_1)
+Jump: (	b	.LBB4_1)
+Jump: (	b	.LBB4_2)
+Jump: (	bhs	.LBB4_7)
+Jump: (	b	.LBB4_3)
+Jump: (	bls	.LBB4_5)
+Jump: (	b	.LBB4_4)
+Jump: (	b	.LBB4_5)
+Jump: (	b	.LBB4_6)
+Jump: (	b	.LBB4_2)
+Jump: (	b	.LBB4_8)
+Jump: (	beq	.LBB4_1)
+Jump: (	b	.LBB4_9)
+Jump: (	b	.LBB5_1)
+Jump: (	bhs	.LBB5_8)
+Jump: (	b	.LBB5_2)
+Jump: (	b	.LBB5_3)
+Jump: (	blt	.LBB5_5)
+Jump: (	b	.LBB5_4)
+Jump: (	b	.LBB5_5)
+Jump: (	beq	.LBB5_7)
+Jump: (	b	.LBB5_6)
+Jump: (	b	.LBB5_3)
+Jump: (	b	.LBB5_1)
+Jump: (	b	.LBB6_1)
+Jump: (	bhs	.LBB6_10)
+Jump: (	b	.LBB6_2)
+Jump: (	b	.LBB6_3)
+Jump: (	bhs	.LBB6_8)
+Jump: (	b	.LBB6_4)
+Jump: (	bhs	.LBB6_6)
+Jump: (	b	.LBB6_5)
+Jump: (	b	.LBB6_6)
+Jump: (	b	.LBB6_7)
+Jump: (	b	.LBB6_3)
+Jump: (	b	.LBB6_9)
+Jump: (	b	.LBB6_1)
+section name extract: [	.section	.rodata,"a",%progbits]->[.rodata]
+start section .rodata
+section name extract: [	.section	.debug_str,"MS",%progbits,1]->[.debug]
+start section .debug
+section name extract: [	.section	.debug_abbrev,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_info,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_ranges,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_macinfo,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubnames,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubtypes,"",%progbits]->[.debug]
+section name extract: [	.section	".note.GNU-stack","",%progbits]->[]
+start section 
+section name extract: [	.section	.debug_line,"",%progbits]->[.debug]
+start section .debug
+running transformer control.ASMParserAUXFiles$
+aux files 
+aux file 
+running transformer control.PaddingInsertionTransformer$
+ERROR: maxpad parameter must be integer
+running transformer control.StartAdressRetriever$
+arm-linux-gnueabi-objdump -D program/pre_analysis/sort.out
+Disassembly of section .text:
+
+
+section string 00000100
+section start .text: 256
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitMISSizeTransformer$
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitBBSizeTransformer$
+max bb size0
+running transformer control.LitPoolTransformer$
+List()
+running transformer control.ASMFileWriter$
+running transformer control.ASCompileTransformer$
+arm-linux-gnueabi-gcc -static -nostdlib -g0 -O0 --entry main --entry main ./program/analysis/sort.s -o ./program/analysis/sort
+running transformer control.AddressInsertionTransformer$
+running transformer control.StatisticsTransformer$
+big blocks: 66
+instructions: 438
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+running transformer control.MISSerializerTransformer$
+main: MIS ID #0
+.Lfunc_begin0: MIS ID #0
+.Ltmp0: MIS ID #0
+.Ltmp1: MIS ID #0
+.Ltmp2: MIS ID #0
+.LBB0_1: MIS ID #1
+.Ltmp3: MIS ID #1
+.Ltmp4: MIS ID #2
+.LBB0_2: MIS ID #2
+.Ltmp5: MIS ID #2
+.Ltmp6: MIS ID #2
+.LBB0_3: MIS ID #3
+.Ltmp7: MIS ID #3
+.Ltmp8: MIS ID #4
+.LBB0_4: MIS ID #4
+.Ltmp9: MIS ID #4
+.Ltmp10: MIS ID #4
+.LBB0_5: MIS ID #5
+.Ltmp11: MIS ID #5
+.Ltmp12: MIS ID #6
+.LBB0_6: MIS ID #6
+.Ltmp13: MIS ID #6
+.Ltmp14: MIS ID #6
+.LBB0_7: MIS ID #7
+.Ltmp15: MIS ID #7
+.Ltmp16: MIS ID #8
+.LBB0_8: MIS ID #8
+.Ltmp17: MIS ID #8
+.Ltmp18: MIS ID #8
+.LBB0_9: MIS ID #9
+.Ltmp19: MIS ID #9
+.Ltmp20: MIS ID #10
+.LBB0_10: MIS ID #10
+.Ltmp21: MIS ID #10
+.Ltmp22: MIS ID #10
+.LBB0_11: MIS ID #11
+.Ltmp23: MIS ID #11
+.Ltmp24: MIS ID #12
+.LBB0_12: MIS ID #12
+.Ltmp25: MIS ID #13
+.Lfunc_end0: MIS ID #13
+array_copy: MIS ID #13
+.Lfunc_begin1: MIS ID #13
+.Ltmp26: MIS ID #13
+.LBB1_1: MIS ID #14
+.Ltmp27: MIS ID #14
+.Ltmp28: MIS ID #14
+.LBB1_2: MIS ID #15
+.Ltmp29: MIS ID #15
+.Ltmp30: MIS ID #16
+.LBB1_3: MIS ID #16
+.Ltmp31: MIS ID #17
+.LBB1_4: MIS ID #17
+.Ltmp32: MIS ID #18
+.Lfunc_end1: MIS ID #18
+array_eq: MIS ID #18
+.Lfunc_begin2: MIS ID #18
+.Ltmp33: MIS ID #18
+.LBB2_1: MIS ID #19
+.Ltmp34: MIS ID #19
+.Ltmp35: MIS ID #19
+.LBB2_2: MIS ID #20
+.Ltmp36: MIS ID #20
+.Ltmp37: MIS ID #20
+.LBB2_3: MIS ID #21
+.Ltmp38: MIS ID #21
+.Ltmp39: MIS ID #22
+.LBB2_4: MIS ID #22
+.Ltmp40: MIS ID #23
+.LBB2_5: MIS ID #23
+.Ltmp41: MIS ID #24
+.LBB2_6: MIS ID #24
+.LBB2_7: MIS ID #25
+.Ltmp42: MIS ID #26
+.Lfunc_end2: MIS ID #26
+sys_exit: MIS ID #26
+.Lfunc_begin3: MIS ID #26
+.Ltmp43: MIS ID #26
+.LBB3_1: MIS ID #27
+.Ltmp44: MIS ID #28
+.Lfunc_end3: MIS ID #28
+bubble_sort: MIS ID #28
+.Lfunc_begin4: MIS ID #28
+.Ltmp45: MIS ID #28
+.LBB4_1: MIS ID #29
+.Ltmp46: MIS ID #29
+.Ltmp47: MIS ID #29
+.LBB4_2: MIS ID #30
+.Ltmp48: MIS ID #30
+.Ltmp49: MIS ID #30
+.LBB4_3: MIS ID #31
+.Ltmp50: MIS ID #31
+.Ltmp51: MIS ID #31
+.LBB4_4: MIS ID #32
+.Ltmp52: MIS ID #32
+.Ltmp53: MIS ID #33
+.LBB4_5: MIS ID #33
+.Ltmp54: MIS ID #34
+.LBB4_6: MIS ID #34
+.Ltmp55: MIS ID #35
+.LBB4_7: MIS ID #35
+.Ltmp56: MIS ID #36
+.LBB4_8: MIS ID #36
+.Ltmp57: MIS ID #36
+.Ltmp58: MIS ID #37
+.LBB4_9: MIS ID #37
+.Ltmp59: MIS ID #38
+.Lfunc_end4: MIS ID #38
+insertion_sort: MIS ID #38
+.Lfunc_begin5: MIS ID #38
+.Ltmp60: MIS ID #38
+.LBB5_1: MIS ID #39
+.LBB5_2: MIS ID #40
+.Ltmp61: MIS ID #40
+.LBB5_3: MIS ID #41
+.LBB5_4: MIS ID #42
+.LBB5_5: MIS ID #43
+.LBB5_6: MIS ID #44
+.Ltmp62: MIS ID #44
+.Ltmp63: MIS ID #44
+.LBB5_7: MIS ID #45
+.Ltmp64: MIS ID #45
+.LBB5_8: MIS ID #46
+.Ltmp65: MIS ID #47
+.Lfunc_end5: MIS ID #47
+selection_sort: MIS ID #47
+.Lfunc_begin6: MIS ID #47
+.Ltmp66: MIS ID #47
+.LBB6_1: MIS ID #48
+.Ltmp67: MIS ID #48
+.Ltmp68: MIS ID #48
+.LBB6_2: MIS ID #49
+.Ltmp69: MIS ID #49
+.Ltmp70: MIS ID #49
+.LBB6_3: MIS ID #50
+.Ltmp71: MIS ID #50
+.Ltmp72: MIS ID #50
+.LBB6_4: MIS ID #51
+.Ltmp73: MIS ID #51
+.Ltmp74: MIS ID #51
+.LBB6_5: MIS ID #52
+.Ltmp75: MIS ID #52
+.Ltmp76: MIS ID #53
+.LBB6_6: MIS ID #53
+.Ltmp77: MIS ID #54
+.LBB6_7: MIS ID #54
+.Ltmp78: MIS ID #55
+.LBB6_8: MIS ID #55
+.Ltmp79: MIS ID #56
+.LBB6_9: MIS ID #56
+.Ltmp80: MIS ID #57
+.LBB6_10: MIS ID #57
+running transformer control.MISSetShuffleSectionsTransformer$
+mis: -1 is shuffable
+mis: 0 is shuffable
+mis: 1 is shuffable
+mis: 2 is shuffable
+mis: 3 is shuffable
+mis: 4 is shuffable
+mis: 5 is shuffable
+mis: 6 is shuffable
+mis: 7 is shuffable
+mis: 8 is shuffable
+mis: 9 is shuffable
+mis: 10 is shuffable
+mis: 11 is shuffable
+mis: 12 is shuffable
+mis: 13 is shuffable
+mis: 14 is shuffable
+mis: 15 is shuffable
+mis: 16 is shuffable
+mis: 17 is shuffable
+mis: 18 is shuffable
+mis: 19 is shuffable
+mis: 20 is shuffable
+mis: 21 is shuffable
+mis: 22 is shuffable
+mis: 23 is shuffable
+mis: 24 is shuffable
+mis: 25 is shuffable
+mis: 26 is shuffable
+mis: 27 is shuffable
+mis: 28 is shuffable
+mis: 29 is shuffable
+mis: 30 is shuffable
+mis: 31 is shuffable
+mis: 32 is shuffable
+mis: 33 is shuffable
+mis: 34 is shuffable
+mis: 35 is shuffable
+mis: 36 is shuffable
+mis: 37 is shuffable
+mis: 38 is shuffable
+mis: 39 is shuffable
+mis: 40 is shuffable
+mis: 41 is shuffable
+mis: 42 is shuffable
+mis: 43 is shuffable
+mis: 44 is shuffable
+mis: 45 is shuffable
+mis: 46 is shuffable
+mis: 47 is shuffable
+mis: 48 is shuffable
+mis: 49 is shuffable
+mis: 50 is shuffable
+mis: 51 is shuffable
+mis: 52 is shuffable
+mis: 53 is shuffable
+mis: 54 is shuffable
+mis: 55 is shuffable
+mis: 56 is shuffable
+mis: 57 is shuffable
+mis: -1 is shuffable
+running transformer control.MISBranchCollectorTransformer$
+Instruction @304 - both branch instruction (MIS #0) and target (MIS #13) can change location
+Instruction @320 - both branch instruction (MIS #0) and target (MIS #18) can change location
+Instruction @336 - both branch instruction (MIS #0) and target (MIS #2) can change location
+Instruction @340 - both branch instruction (MIS #0) and target (MIS #1) can change location
+Instruction @372 - both branch instruction (MIS #1) and target (MIS #26) can change location
+Instruction @376 - both branch instruction (MIS #1) and target (MIS #2) can change location
+Instruction @396 - both branch instruction (MIS #2) and target (MIS #28) can change location
+Instruction @416 - both branch instruction (MIS #2) and target (MIS #18) can change location
+Instruction @432 - both branch instruction (MIS #2) and target (MIS #4) can change location
+Instruction @436 - both branch instruction (MIS #2) and target (MIS #3) can change location
+Instruction @468 - both branch instruction (MIS #3) and target (MIS #26) can change location
+Instruction @472 - both branch instruction (MIS #3) and target (MIS #4) can change location
+Instruction @504 - both branch instruction (MIS #4) and target (MIS #13) can change location
+Instruction @520 - both branch instruction (MIS #4) and target (MIS #18) can change location
+Instruction @536 - both branch instruction (MIS #4) and target (MIS #6) can change location
+Instruction @540 - both branch instruction (MIS #4) and target (MIS #5) can change location
+Instruction @572 - both branch instruction (MIS #5) and target (MIS #26) can change location
+Instruction @576 - both branch instruction (MIS #5) and target (MIS #6) can change location
+Instruction @596 - both branch instruction (MIS #6) and target (MIS #38) can change location
+Instruction @616 - both branch instruction (MIS #6) and target (MIS #18) can change location
+Instruction @632 - both branch instruction (MIS #6) and target (MIS #8) can change location
+Instruction @636 - both branch instruction (MIS #6) and target (MIS #7) can change location
+Instruction @668 - both branch instruction (MIS #7) and target (MIS #26) can change location
+Instruction @672 - both branch instruction (MIS #7) and target (MIS #8) can change location
+Instruction @704 - both branch instruction (MIS #8) and target (MIS #13) can change location
+Instruction @720 - both branch instruction (MIS #8) and target (MIS #18) can change location
+Instruction @736 - both branch instruction (MIS #8) and target (MIS #10) can change location
+Instruction @740 - both branch instruction (MIS #8) and target (MIS #9) can change location
+Instruction @772 - both branch instruction (MIS #9) and target (MIS #26) can change location
+Instruction @776 - both branch instruction (MIS #9) and target (MIS #10) can change location
+Instruction @796 - both branch instruction (MIS #10) and target (MIS #47) can change location
+Instruction @816 - both branch instruction (MIS #10) and target (MIS #18) can change location
+Instruction @832 - both branch instruction (MIS #10) and target (MIS #12) can change location
+Instruction @836 - both branch instruction (MIS #10) and target (MIS #11) can change location
+Instruction @868 - both branch instruction (MIS #11) and target (MIS #26) can change location
+Instruction @872 - both branch instruction (MIS #11) and target (MIS #12) can change location
+Instruction @896 - both branch instruction (MIS #12) and target (MIS #26) can change location
+Instruction @968 - both branch instruction (MIS #13) and target (MIS #14) can change location
+Instruction @984 - both branch instruction (MIS #14) and target (MIS #17) can change location
+Instruction @988 - both branch instruction (MIS #14) and target (MIS #15) can change location
+Instruction @1012 - both branch instruction (MIS #15) and target (MIS #16) can change location
+Instruction @1028 - both branch instruction (MIS #16) and target (MIS #14) can change location
+Instruction @1096 - both branch instruction (MIS #18) and target (MIS #19) can change location
+Instruction @1112 - both branch instruction (MIS #19) and target (MIS #24) can change location
+Instruction @1116 - both branch instruction (MIS #19) and target (MIS #20) can change location
+Instruction @1144 - both branch instruction (MIS #20) and target (MIS #22) can change location
+Instruction @1148 - both branch instruction (MIS #20) and target (MIS #21) can change location
+Instruction @1160 - both branch instruction (MIS #21) and target (MIS #25) can change location
+Instruction @1164 - both branch instruction (MIS #22) and target (MIS #23) can change location
+Instruction @1180 - both branch instruction (MIS #23) and target (MIS #19) can change location
+Instruction @1192 - both branch instruction (MIS #24) and target (MIS #25) can change location
+Instruction @1268 - both branch instruction (MIS #26) and target (MIS #27) can change location
+Instruction @1304 - both branch instruction (MIS #28) and target (MIS #29) can change location
+Instruction @1324 - both branch instruction (MIS #29) and target (MIS #30) can change location
+Instruction @1340 - both branch instruction (MIS #30) and target (MIS #35) can change location
+Instruction @1344 - both branch instruction (MIS #30) and target (MIS #31) can change location
+Instruction @1368 - both branch instruction (MIS #31) and target (MIS #33) can change location
+Instruction @1372 - both branch instruction (MIS #31) and target (MIS #32) can change location
+Instruction @1440 - both branch instruction (MIS #32) and target (MIS #33) can change location
+Instruction @1444 - both branch instruction (MIS #33) and target (MIS #34) can change location
+Instruction @1460 - both branch instruction (MIS #34) and target (MIS #30) can change location
+Instruction @1476 - both branch instruction (MIS #35) and target (MIS #36) can change location
+Instruction @1488 - both branch instruction (MIS #36) and target (MIS #29) can change location
+Instruction @1492 - both branch instruction (MIS #36) and target (MIS #37) can change location
+Instruction @1540 - both branch instruction (MIS #38) and target (MIS #39) can change location
+Instruction @1556 - both branch instruction (MIS #39) and target (MIS #46) can change location
+Instruction @1560 - both branch instruction (MIS #39) and target (MIS #40) can change location
+Instruction @1592 - both branch instruction (MIS #40) and target (MIS #41) can change location
+Instruction @1612 - both branch instruction (MIS #41) and target (MIS #43) can change location
+Instruction @1616 - both branch instruction (MIS #41) and target (MIS #42) can change location
+Instruction @1652 - both branch instruction (MIS #42) and target (MIS #43) can change location
+Instruction @1664 - both branch instruction (MIS #43) and target (MIS #45) can change location
+Instruction @1668 - both branch instruction (MIS #43) and target (MIS #44) can change location
+Instruction @1700 - both branch instruction (MIS #44) and target (MIS #41) can change location
+Instruction @1736 - both branch instruction (MIS #45) and target (MIS #39) can change location
+Instruction @1784 - both branch instruction (MIS #47) and target (MIS #48) can change location
+Instruction @1808 - both branch instruction (MIS #48) and target (MIS #57) can change location
+Instruction @1812 - both branch instruction (MIS #48) and target (MIS #49) can change location
+Instruction @1836 - both branch instruction (MIS #49) and target (MIS #50) can change location
+Instruction @1852 - both branch instruction (MIS #50) and target (MIS #55) can change location
+Instruction @1856 - both branch instruction (MIS #50) and target (MIS #51) can change location
+Instruction @1884 - both branch instruction (MIS #51) and target (MIS #53) can change location
+Instruction @1888 - both branch instruction (MIS #51) and target (MIS #52) can change location
+Instruction @1900 - both branch instruction (MIS #52) and target (MIS #53) can change location
+Instruction @1904 - both branch instruction (MIS #53) and target (MIS #54) can change location
+Instruction @1920 - both branch instruction (MIS #54) and target (MIS #50) can change location
+Instruction @1976 - both branch instruction (MIS #55) and target (MIS #56) can change location
+Instruction @1992 - both branch instruction (MIS #56) and target (MIS #48) can change location
+running transformer control.DiversificationBinaryDump$
+dumping diversification binary infos
+
+
+130critical Istr: t:array_copy labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+140critical Istr: t:array_eq labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+150critical Istr: t:.LBB0_2 labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+154critical Istr: t:.LBB0_1 labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+174critical Istr: t:sys_exit labels: 
+.LBB0_1
+.Ltmp3
+
+
+178critical Istr: t:.LBB0_2 labels: 
+.LBB0_1
+.Ltmp3
+
+
+18ccritical Istr: t:bubble_sort labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1a0critical Istr: t:array_eq labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1b0critical Istr: t:.LBB0_4 labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1b4critical Istr: t:.LBB0_3 labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1d4critical Istr: t:sys_exit labels: 
+.LBB0_3
+.Ltmp7
+
+
+1d8critical Istr: t:.LBB0_4 labels: 
+.LBB0_3
+.Ltmp7
+
+
+1f8critical Istr: t:array_copy labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+208critical Istr: t:array_eq labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+218critical Istr: t:.LBB0_6 labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+21ccritical Istr: t:.LBB0_5 labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+23ccritical Istr: t:sys_exit labels: 
+.LBB0_5
+.Ltmp11
+
+
+240critical Istr: t:.LBB0_6 labels: 
+.LBB0_5
+.Ltmp11
+
+
+254critical Istr: t:insertion_sort labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+268critical Istr: t:array_eq labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+278critical Istr: t:.LBB0_8 labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+27ccritical Istr: t:.LBB0_7 labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+29ccritical Istr: t:sys_exit labels: 
+.LBB0_7
+.Ltmp15
+
+
+2a0critical Istr: t:.LBB0_8 labels: 
+.LBB0_7
+.Ltmp15
+
+
+2c0critical Istr: t:array_copy labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2d0critical Istr: t:array_eq labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2e0critical Istr: t:.LBB0_10 labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2e4critical Istr: t:.LBB0_9 labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+304critical Istr: t:sys_exit labels: 
+.LBB0_9
+.Ltmp19
+
+
+308critical Istr: t:.LBB0_10 labels: 
+.LBB0_9
+.Ltmp19
+
+
+31ccritical Istr: t:selection_sort labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+330critical Istr: t:array_eq labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+340critical Istr: t:.LBB0_12 labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+344critical Istr: t:.LBB0_11 labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+364critical Istr: t:sys_exit labels: 
+.LBB0_11
+.Ltmp23
+
+
+368critical Istr: t:.LBB0_12 labels: 
+.LBB0_11
+.Ltmp23
+
+
+380critical Istr: t:sys_exit labels: 
+.Ltmp24
+.LBB0_12
+
+
+3c8critical Istr: t:.LBB1_1 labels: 
+.Ltmp25
+.Lfunc_end0
+array_copy
+.Lfunc_begin1
+.Ltmp26
+
+
+3d8critical Istr: t:.LBB1_4 labels: 
+.LBB1_1
+.Ltmp27
+.Ltmp28
+
+
+3dccritical Istr: t:.LBB1_2 labels: 
+.LBB1_1
+.Ltmp27
+.Ltmp28
+
+
+3f4critical Istr: t:.LBB1_3 labels: 
+.LBB1_2
+.Ltmp29
+
+
+404critical Istr: t:.LBB1_1 labels: 
+.Ltmp30
+.LBB1_3
+
+
+448critical Istr: t:.LBB2_1 labels: 
+.Ltmp32
+.Lfunc_end1
+array_eq
+.Lfunc_begin2
+.Ltmp33
+
+
+458critical Istr: t:.LBB2_6 labels: 
+.LBB2_1
+.Ltmp34
+.Ltmp35
+
+
+45ccritical Istr: t:.LBB2_2 labels: 
+.LBB2_1
+.Ltmp34
+.Ltmp35
+
+
+478critical Istr: t:.LBB2_4 labels: 
+.LBB2_2
+.Ltmp36
+.Ltmp37
+
+
+47ccritical Istr: t:.LBB2_3 labels: 
+.LBB2_2
+.Ltmp36
+.Ltmp37
+
+
+488critical Istr: t:.LBB2_7 labels: 
+.LBB2_3
+.Ltmp38
+
+
+48ccritical Istr: t:.LBB2_5 labels: 
+.Ltmp39
+.LBB2_4
+
+
+49ccritical Istr: t:.LBB2_1 labels: 
+.Ltmp40
+.LBB2_5
+
+
+4a8critical Istr: t:.LBB2_7 labels: 
+.Ltmp41
+.LBB2_6
+
+
+4f4critical Istr: t:.LBB3_1 labels: 
+.Ltmp42
+.Lfunc_end2
+sys_exit
+.Lfunc_begin3
+.Ltmp43
+
+
+518critical Istr: t:.LBB4_1 labels: 
+.Ltmp44
+.Lfunc_end3
+bubble_sort
+.Lfunc_begin4
+.Ltmp45
+
+
+52ccritical Istr: t:.LBB4_2 labels: 
+.LBB4_1
+.Ltmp46
+.Ltmp47
+
+
+53ccritical Istr: t:.LBB4_7 labels: 
+.LBB4_2
+.Ltmp48
+.Ltmp49
+
+
+540critical Istr: t:.LBB4_3 labels: 
+.LBB4_2
+.Ltmp48
+.Ltmp49
+
+
+558critical Istr: t:.LBB4_5 labels: 
+.LBB4_3
+.Ltmp50
+.Ltmp51
+
+
+55ccritical Istr: t:.LBB4_4 labels: 
+.LBB4_3
+.Ltmp50
+.Ltmp51
+
+
+5a0critical Istr: t:.LBB4_5 labels: 
+.LBB4_4
+.Ltmp52
+
+
+5a4critical Istr: t:.LBB4_6 labels: 
+.Ltmp53
+.LBB4_5
+
+
+5b4critical Istr: t:.LBB4_2 labels: 
+.Ltmp54
+.LBB4_6
+
+
+5c4critical Istr: t:.LBB4_8 labels: 
+.Ltmp55
+.LBB4_7
+
+
+5d0critical Istr: t:.LBB4_1 labels: 
+.Ltmp56
+.LBB4_8
+.Ltmp57
+
+
+5d4critical Istr: t:.LBB4_9 labels: 
+.Ltmp56
+.LBB4_8
+.Ltmp57
+
+
+604critical Istr: t:.LBB5_1 labels: 
+.Ltmp59
+.Lfunc_end4
+insertion_sort
+.Lfunc_begin5
+.Ltmp60
+
+
+614critical Istr: t:.LBB5_8 labels: 
+.LBB5_1
+
+
+618critical Istr: t:.LBB5_2 labels: 
+.LBB5_1
+
+
+638critical Istr: t:.LBB5_3 labels: 
+.LBB5_2
+.Ltmp61
+
+
+64ccritical Istr: t:.LBB5_5 labels: 
+.LBB5_3
+
+
+650critical Istr: t:.LBB5_4 labels: 
+.LBB5_3
+
+
+674critical Istr: t:.LBB5_5 labels: 
+.LBB5_4
+
+
+680critical Istr: t:.LBB5_7 labels: 
+.LBB5_5
+
+
+684critical Istr: t:.LBB5_6 labels: 
+.LBB5_5
+
+
+6a4critical Istr: t:.LBB5_3 labels: 
+.LBB5_6
+.Ltmp62
+.Ltmp63
+
+
+6c8critical Istr: t:.LBB5_1 labels: 
+.LBB5_7
+.Ltmp64
+
+
+6f8critical Istr: t:.LBB6_1 labels: 
+.Ltmp65
+.Lfunc_end5
+selection_sort
+.Lfunc_begin6
+.Ltmp66
+
+
+710critical Istr: t:.LBB6_10 labels: 
+.LBB6_1
+.Ltmp67
+.Ltmp68
+
+
+714critical Istr: t:.LBB6_2 labels: 
+.LBB6_1
+.Ltmp67
+.Ltmp68
+
+
+72ccritical Istr: t:.LBB6_3 labels: 
+.LBB6_2
+.Ltmp69
+.Ltmp70
+
+
+73ccritical Istr: t:.LBB6_8 labels: 
+.LBB6_3
+.Ltmp71
+.Ltmp72
+
+
+740critical Istr: t:.LBB6_4 labels: 
+.LBB6_3
+.Ltmp71
+.Ltmp72
+
+
+75ccritical Istr: t:.LBB6_6 labels: 
+.LBB6_4
+.Ltmp73
+.Ltmp74
+
+
+760critical Istr: t:.LBB6_5 labels: 
+.LBB6_4
+.Ltmp73
+.Ltmp74
+
+
+76ccritical Istr: t:.LBB6_6 labels: 
+.LBB6_5
+.Ltmp75
+
+
+770critical Istr: t:.LBB6_7 labels: 
+.Ltmp76
+.LBB6_6
+
+
+780critical Istr: t:.LBB6_3 labels: 
+.Ltmp77
+.LBB6_7
+
+
+7b8critical Istr: t:.LBB6_9 labels: 
+.Ltmp78
+.LBB6_8
+
+
+7c8critical Istr: t:.LBB6_1 labels: 
+.Ltmp79
+.LBB6_9
+creating headerfile with data sizes in diversification binary infos
+running transformer control.RunTimeMeasurement$
+Time measured: 420ms
+running transformer control.StatisticsTransformer$
+big blocks: 66
+instructions: 438
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+WCET-aware diversity.
+PROG:program/pre_analysis/sort.out FACTOR: 1.0 HEURISTIC: true
+running transformer control.RunTimeMeasurement$
+running transformer control.ASMParser$
+section name extract: [	.text]->[.text]
+start section .text
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_2)
+Jump: (	b	.LBB0_1)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_2)
+Jump: (	bl	bubble_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_4)
+Jump: (	b	.LBB0_3)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_4)
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_6)
+Jump: (	b	.LBB0_5)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_6)
+Jump: (	bl	insertion_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_8)
+Jump: (	b	.LBB0_7)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_8)
+Jump: (	bl	array_copy)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_10)
+Jump: (	b	.LBB0_9)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_10)
+Jump: (	bl	selection_sort)
+Jump: (	bl	array_eq)
+Jump: (	beq	.LBB0_12)
+Jump: (	b	.LBB0_11)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB0_12)
+Jump: (	bl	sys_exit)
+Jump: (	b	.LBB1_1)
+Jump: (	bhs	.LBB1_4)
+Jump: (	b	.LBB1_2)
+Jump: (	b	.LBB1_3)
+Jump: (	b	.LBB1_1)
+Jump: (	b	.LBB2_1)
+Jump: (	bhs	.LBB2_6)
+Jump: (	b	.LBB2_2)
+Jump: (	beq	.LBB2_4)
+Jump: (	b	.LBB2_3)
+Jump: (	b	.LBB2_7)
+Jump: (	b	.LBB2_5)
+Jump: (	b	.LBB2_1)
+Jump: (	b	.LBB2_7)
+Jump: (	b	.LBB3_1)
+Jump: (	b	.LBB3_1)
+Jump: (	b	.LBB4_1)
+Jump: (	b	.LBB4_2)
+Jump: (	bhs	.LBB4_7)
+Jump: (	b	.LBB4_3)
+Jump: (	bls	.LBB4_5)
+Jump: (	b	.LBB4_4)
+Jump: (	b	.LBB4_5)
+Jump: (	b	.LBB4_6)
+Jump: (	b	.LBB4_2)
+Jump: (	b	.LBB4_8)
+Jump: (	beq	.LBB4_1)
+Jump: (	b	.LBB4_9)
+Jump: (	b	.LBB5_1)
+Jump: (	bhs	.LBB5_8)
+Jump: (	b	.LBB5_2)
+Jump: (	b	.LBB5_3)
+Jump: (	blt	.LBB5_5)
+Jump: (	b	.LBB5_4)
+Jump: (	b	.LBB5_5)
+Jump: (	beq	.LBB5_7)
+Jump: (	b	.LBB5_6)
+Jump: (	b	.LBB5_3)
+Jump: (	b	.LBB5_1)
+Jump: (	b	.LBB6_1)
+Jump: (	bhs	.LBB6_10)
+Jump: (	b	.LBB6_2)
+Jump: (	b	.LBB6_3)
+Jump: (	bhs	.LBB6_8)
+Jump: (	b	.LBB6_4)
+Jump: (	bhs	.LBB6_6)
+Jump: (	b	.LBB6_5)
+Jump: (	b	.LBB6_6)
+Jump: (	b	.LBB6_7)
+Jump: (	b	.LBB6_3)
+Jump: (	b	.LBB6_9)
+Jump: (	b	.LBB6_1)
+section name extract: [	.section	.rodata,"a",%progbits]->[.rodata]
+start section .rodata
+section name extract: [	.section	.debug_str,"MS",%progbits,1]->[.debug]
+start section .debug
+section name extract: [	.section	.debug_abbrev,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_info,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_ranges,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_macinfo,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubnames,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubtypes,"",%progbits]->[.debug]
+section name extract: [	.section	".note.GNU-stack","",%progbits]->[]
+start section 
+section name extract: [	.section	.debug_line,"",%progbits]->[.debug]
+start section .debug
+running transformer control.ASMParserAUXFiles$
+aux files 
+aux file 
+running transformer control.PaddingInsertionTransformer$
+ERROR: maxpad parameter must be integer
+running transformer control.StartAdressRetriever$
+arm-linux-gnueabi-objdump -D program/pre_analysis/sort.out
+Disassembly of section .text:
+
+
+section string 00000100
+section start .text: 256
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitMISSizeTransformer$
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitBBSizeTransformer$
+max bb size0
+running transformer control.LitPoolTransformer$
+List()
+running transformer control.ASMFileWriter$
+running transformer control.ASCompileTransformer$
+arm-linux-gnueabi-gcc -static -nostdlib -g0 -O0 --entry main --entry main ./program/analysis/sort.s -o ./program/analysis/sort
+running transformer control.AddressInsertionTransformer$
+running transformer control.StatisticsTransformer$
+big blocks: 66
+instructions: 438
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+running transformer control.MISSerializerTransformer$
+main: MIS ID #0
+.Lfunc_begin0: MIS ID #0
+.Ltmp0: MIS ID #0
+.Ltmp1: MIS ID #0
+.Ltmp2: MIS ID #0
+.LBB0_1: MIS ID #1
+.Ltmp3: MIS ID #1
+.Ltmp4: MIS ID #2
+.LBB0_2: MIS ID #2
+.Ltmp5: MIS ID #2
+.Ltmp6: MIS ID #2
+.LBB0_3: MIS ID #3
+.Ltmp7: MIS ID #3
+.Ltmp8: MIS ID #4
+.LBB0_4: MIS ID #4
+.Ltmp9: MIS ID #4
+.Ltmp10: MIS ID #4
+.LBB0_5: MIS ID #5
+.Ltmp11: MIS ID #5
+.Ltmp12: MIS ID #6
+.LBB0_6: MIS ID #6
+.Ltmp13: MIS ID #6
+.Ltmp14: MIS ID #6
+.LBB0_7: MIS ID #7
+.Ltmp15: MIS ID #7
+.Ltmp16: MIS ID #8
+.LBB0_8: MIS ID #8
+.Ltmp17: MIS ID #8
+.Ltmp18: MIS ID #8
+.LBB0_9: MIS ID #9
+.Ltmp19: MIS ID #9
+.Ltmp20: MIS ID #10
+.LBB0_10: MIS ID #10
+.Ltmp21: MIS ID #10
+.Ltmp22: MIS ID #10
+.LBB0_11: MIS ID #11
+.Ltmp23: MIS ID #11
+.Ltmp24: MIS ID #12
+.LBB0_12: MIS ID #12
+.Ltmp25: MIS ID #13
+.Lfunc_end0: MIS ID #13
+array_copy: MIS ID #13
+.Lfunc_begin1: MIS ID #13
+.Ltmp26: MIS ID #13
+.LBB1_1: MIS ID #14
+.Ltmp27: MIS ID #14
+.Ltmp28: MIS ID #14
+.LBB1_2: MIS ID #15
+.Ltmp29: MIS ID #15
+.Ltmp30: MIS ID #16
+.LBB1_3: MIS ID #16
+.Ltmp31: MIS ID #17
+.LBB1_4: MIS ID #17
+.Ltmp32: MIS ID #18
+.Lfunc_end1: MIS ID #18
+array_eq: MIS ID #18
+.Lfunc_begin2: MIS ID #18
+.Ltmp33: MIS ID #18
+.LBB2_1: MIS ID #19
+.Ltmp34: MIS ID #19
+.Ltmp35: MIS ID #19
+.LBB2_2: MIS ID #20
+.Ltmp36: MIS ID #20
+.Ltmp37: MIS ID #20
+.LBB2_3: MIS ID #21
+.Ltmp38: MIS ID #21
+.Ltmp39: MIS ID #22
+.LBB2_4: MIS ID #22
+.Ltmp40: MIS ID #23
+.LBB2_5: MIS ID #23
+.Ltmp41: MIS ID #24
+.LBB2_6: MIS ID #24
+.LBB2_7: MIS ID #25
+.Ltmp42: MIS ID #26
+.Lfunc_end2: MIS ID #26
+sys_exit: MIS ID #26
+.Lfunc_begin3: MIS ID #26
+.Ltmp43: MIS ID #26
+.LBB3_1: MIS ID #27
+.Ltmp44: MIS ID #28
+.Lfunc_end3: MIS ID #28
+bubble_sort: MIS ID #28
+.Lfunc_begin4: MIS ID #28
+.Ltmp45: MIS ID #28
+.LBB4_1: MIS ID #29
+.Ltmp46: MIS ID #29
+.Ltmp47: MIS ID #29
+.LBB4_2: MIS ID #30
+.Ltmp48: MIS ID #30
+.Ltmp49: MIS ID #30
+.LBB4_3: MIS ID #31
+.Ltmp50: MIS ID #31
+.Ltmp51: MIS ID #31
+.LBB4_4: MIS ID #32
+.Ltmp52: MIS ID #32
+.Ltmp53: MIS ID #33
+.LBB4_5: MIS ID #33
+.Ltmp54: MIS ID #34
+.LBB4_6: MIS ID #34
+.Ltmp55: MIS ID #35
+.LBB4_7: MIS ID #35
+.Ltmp56: MIS ID #36
+.LBB4_8: MIS ID #36
+.Ltmp57: MIS ID #36
+.Ltmp58: MIS ID #37
+.LBB4_9: MIS ID #37
+.Ltmp59: MIS ID #38
+.Lfunc_end4: MIS ID #38
+insertion_sort: MIS ID #38
+.Lfunc_begin5: MIS ID #38
+.Ltmp60: MIS ID #38
+.LBB5_1: MIS ID #39
+.LBB5_2: MIS ID #40
+.Ltmp61: MIS ID #40
+.LBB5_3: MIS ID #41
+.LBB5_4: MIS ID #42
+.LBB5_5: MIS ID #43
+.LBB5_6: MIS ID #44
+.Ltmp62: MIS ID #44
+.Ltmp63: MIS ID #44
+.LBB5_7: MIS ID #45
+.Ltmp64: MIS ID #45
+.LBB5_8: MIS ID #46
+.Ltmp65: MIS ID #47
+.Lfunc_end5: MIS ID #47
+selection_sort: MIS ID #47
+.Lfunc_begin6: MIS ID #47
+.Ltmp66: MIS ID #47
+.LBB6_1: MIS ID #48
+.Ltmp67: MIS ID #48
+.Ltmp68: MIS ID #48
+.LBB6_2: MIS ID #49
+.Ltmp69: MIS ID #49
+.Ltmp70: MIS ID #49
+.LBB6_3: MIS ID #50
+.Ltmp71: MIS ID #50
+.Ltmp72: MIS ID #50
+.LBB6_4: MIS ID #51
+.Ltmp73: MIS ID #51
+.Ltmp74: MIS ID #51
+.LBB6_5: MIS ID #52
+.Ltmp75: MIS ID #52
+.Ltmp76: MIS ID #53
+.LBB6_6: MIS ID #53
+.Ltmp77: MIS ID #54
+.LBB6_7: MIS ID #54
+.Ltmp78: MIS ID #55
+.LBB6_8: MIS ID #55
+.Ltmp79: MIS ID #56
+.LBB6_9: MIS ID #56
+.Ltmp80: MIS ID #57
+.LBB6_10: MIS ID #57
+running transformer control.MISSetShuffleSectionsTransformer$
+mis: -1 is shuffable
+mis: 0 is shuffable
+mis: 1 is shuffable
+mis: 2 is shuffable
+mis: 3 is shuffable
+mis: 4 is shuffable
+mis: 5 is shuffable
+mis: 6 is shuffable
+mis: 7 is shuffable
+mis: 8 is shuffable
+mis: 9 is shuffable
+mis: 10 is shuffable
+mis: 11 is shuffable
+mis: 12 is shuffable
+mis: 13 is shuffable
+mis: 14 is shuffable
+mis: 15 is shuffable
+mis: 16 is shuffable
+mis: 17 is shuffable
+mis: 18 is shuffable
+mis: 19 is shuffable
+mis: 20 is shuffable
+mis: 21 is shuffable
+mis: 22 is shuffable
+mis: 23 is shuffable
+mis: 24 is shuffable
+mis: 25 is shuffable
+mis: 26 is shuffable
+mis: 27 is shuffable
+mis: 28 is shuffable
+mis: 29 is shuffable
+mis: 30 is shuffable
+mis: 31 is shuffable
+mis: 32 is shuffable
+mis: 33 is shuffable
+mis: 34 is shuffable
+mis: 35 is shuffable
+mis: 36 is shuffable
+mis: 37 is shuffable
+mis: 38 is shuffable
+mis: 39 is shuffable
+mis: 40 is shuffable
+mis: 41 is shuffable
+mis: 42 is shuffable
+mis: 43 is shuffable
+mis: 44 is shuffable
+mis: 45 is shuffable
+mis: 46 is shuffable
+mis: 47 is shuffable
+mis: 48 is shuffable
+mis: 49 is shuffable
+mis: 50 is shuffable
+mis: 51 is shuffable
+mis: 52 is shuffable
+mis: 53 is shuffable
+mis: 54 is shuffable
+mis: 55 is shuffable
+mis: 56 is shuffable
+mis: 57 is shuffable
+mis: -1 is shuffable
+running transformer control.MISBranchCollectorTransformer$
+Instruction @304 - both branch instruction (MIS #0) and target (MIS #13) can change location
+Instruction @320 - both branch instruction (MIS #0) and target (MIS #18) can change location
+Instruction @336 - both branch instruction (MIS #0) and target (MIS #2) can change location
+Instruction @340 - both branch instruction (MIS #0) and target (MIS #1) can change location
+Instruction @372 - both branch instruction (MIS #1) and target (MIS #26) can change location
+Instruction @376 - both branch instruction (MIS #1) and target (MIS #2) can change location
+Instruction @396 - both branch instruction (MIS #2) and target (MIS #28) can change location
+Instruction @416 - both branch instruction (MIS #2) and target (MIS #18) can change location
+Instruction @432 - both branch instruction (MIS #2) and target (MIS #4) can change location
+Instruction @436 - both branch instruction (MIS #2) and target (MIS #3) can change location
+Instruction @468 - both branch instruction (MIS #3) and target (MIS #26) can change location
+Instruction @472 - both branch instruction (MIS #3) and target (MIS #4) can change location
+Instruction @504 - both branch instruction (MIS #4) and target (MIS #13) can change location
+Instruction @520 - both branch instruction (MIS #4) and target (MIS #18) can change location
+Instruction @536 - both branch instruction (MIS #4) and target (MIS #6) can change location
+Instruction @540 - both branch instruction (MIS #4) and target (MIS #5) can change location
+Instruction @572 - both branch instruction (MIS #5) and target (MIS #26) can change location
+Instruction @576 - both branch instruction (MIS #5) and target (MIS #6) can change location
+Instruction @596 - both branch instruction (MIS #6) and target (MIS #38) can change location
+Instruction @616 - both branch instruction (MIS #6) and target (MIS #18) can change location
+Instruction @632 - both branch instruction (MIS #6) and target (MIS #8) can change location
+Instruction @636 - both branch instruction (MIS #6) and target (MIS #7) can change location
+Instruction @668 - both branch instruction (MIS #7) and target (MIS #26) can change location
+Instruction @672 - both branch instruction (MIS #7) and target (MIS #8) can change location
+Instruction @704 - both branch instruction (MIS #8) and target (MIS #13) can change location
+Instruction @720 - both branch instruction (MIS #8) and target (MIS #18) can change location
+Instruction @736 - both branch instruction (MIS #8) and target (MIS #10) can change location
+Instruction @740 - both branch instruction (MIS #8) and target (MIS #9) can change location
+Instruction @772 - both branch instruction (MIS #9) and target (MIS #26) can change location
+Instruction @776 - both branch instruction (MIS #9) and target (MIS #10) can change location
+Instruction @796 - both branch instruction (MIS #10) and target (MIS #47) can change location
+Instruction @816 - both branch instruction (MIS #10) and target (MIS #18) can change location
+Instruction @832 - both branch instruction (MIS #10) and target (MIS #12) can change location
+Instruction @836 - both branch instruction (MIS #10) and target (MIS #11) can change location
+Instruction @868 - both branch instruction (MIS #11) and target (MIS #26) can change location
+Instruction @872 - both branch instruction (MIS #11) and target (MIS #12) can change location
+Instruction @896 - both branch instruction (MIS #12) and target (MIS #26) can change location
+Instruction @968 - both branch instruction (MIS #13) and target (MIS #14) can change location
+Instruction @984 - both branch instruction (MIS #14) and target (MIS #17) can change location
+Instruction @988 - both branch instruction (MIS #14) and target (MIS #15) can change location
+Instruction @1012 - both branch instruction (MIS #15) and target (MIS #16) can change location
+Instruction @1028 - both branch instruction (MIS #16) and target (MIS #14) can change location
+Instruction @1096 - both branch instruction (MIS #18) and target (MIS #19) can change location
+Instruction @1112 - both branch instruction (MIS #19) and target (MIS #24) can change location
+Instruction @1116 - both branch instruction (MIS #19) and target (MIS #20) can change location
+Instruction @1144 - both branch instruction (MIS #20) and target (MIS #22) can change location
+Instruction @1148 - both branch instruction (MIS #20) and target (MIS #21) can change location
+Instruction @1160 - both branch instruction (MIS #21) and target (MIS #25) can change location
+Instruction @1164 - both branch instruction (MIS #22) and target (MIS #23) can change location
+Instruction @1180 - both branch instruction (MIS #23) and target (MIS #19) can change location
+Instruction @1192 - both branch instruction (MIS #24) and target (MIS #25) can change location
+Instruction @1268 - both branch instruction (MIS #26) and target (MIS #27) can change location
+Instruction @1304 - both branch instruction (MIS #28) and target (MIS #29) can change location
+Instruction @1324 - both branch instruction (MIS #29) and target (MIS #30) can change location
+Instruction @1340 - both branch instruction (MIS #30) and target (MIS #35) can change location
+Instruction @1344 - both branch instruction (MIS #30) and target (MIS #31) can change location
+Instruction @1368 - both branch instruction (MIS #31) and target (MIS #33) can change location
+Instruction @1372 - both branch instruction (MIS #31) and target (MIS #32) can change location
+Instruction @1440 - both branch instruction (MIS #32) and target (MIS #33) can change location
+Instruction @1444 - both branch instruction (MIS #33) and target (MIS #34) can change location
+Instruction @1460 - both branch instruction (MIS #34) and target (MIS #30) can change location
+Instruction @1476 - both branch instruction (MIS #35) and target (MIS #36) can change location
+Instruction @1488 - both branch instruction (MIS #36) and target (MIS #29) can change location
+Instruction @1492 - both branch instruction (MIS #36) and target (MIS #37) can change location
+Instruction @1540 - both branch instruction (MIS #38) and target (MIS #39) can change location
+Instruction @1556 - both branch instruction (MIS #39) and target (MIS #46) can change location
+Instruction @1560 - both branch instruction (MIS #39) and target (MIS #40) can change location
+Instruction @1592 - both branch instruction (MIS #40) and target (MIS #41) can change location
+Instruction @1612 - both branch instruction (MIS #41) and target (MIS #43) can change location
+Instruction @1616 - both branch instruction (MIS #41) and target (MIS #42) can change location
+Instruction @1652 - both branch instruction (MIS #42) and target (MIS #43) can change location
+Instruction @1664 - both branch instruction (MIS #43) and target (MIS #45) can change location
+Instruction @1668 - both branch instruction (MIS #43) and target (MIS #44) can change location
+Instruction @1700 - both branch instruction (MIS #44) and target (MIS #41) can change location
+Instruction @1736 - both branch instruction (MIS #45) and target (MIS #39) can change location
+Instruction @1784 - both branch instruction (MIS #47) and target (MIS #48) can change location
+Instruction @1808 - both branch instruction (MIS #48) and target (MIS #57) can change location
+Instruction @1812 - both branch instruction (MIS #48) and target (MIS #49) can change location
+Instruction @1836 - both branch instruction (MIS #49) and target (MIS #50) can change location
+Instruction @1852 - both branch instruction (MIS #50) and target (MIS #55) can change location
+Instruction @1856 - both branch instruction (MIS #50) and target (MIS #51) can change location
+Instruction @1884 - both branch instruction (MIS #51) and target (MIS #53) can change location
+Instruction @1888 - both branch instruction (MIS #51) and target (MIS #52) can change location
+Instruction @1900 - both branch instruction (MIS #52) and target (MIS #53) can change location
+Instruction @1904 - both branch instruction (MIS #53) and target (MIS #54) can change location
+Instruction @1920 - both branch instruction (MIS #54) and target (MIS #50) can change location
+Instruction @1976 - both branch instruction (MIS #55) and target (MIS #56) can change location
+Instruction @1992 - both branch instruction (MIS #56) and target (MIS #48) can change location
+running transformer control.DiversificationBinaryDump$
+dumping diversification binary infos
+
+
+130critical Istr: t:array_copy labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+140critical Istr: t:array_eq labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+150critical Istr: t:.LBB0_2 labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+154critical Istr: t:.LBB0_1 labels: 
+main
+.Lfunc_begin0
+.Ltmp0
+.Ltmp1
+.Ltmp2
+
+
+174critical Istr: t:sys_exit labels: 
+.LBB0_1
+.Ltmp3
+
+
+178critical Istr: t:.LBB0_2 labels: 
+.LBB0_1
+.Ltmp3
+
+
+18ccritical Istr: t:bubble_sort labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1a0critical Istr: t:array_eq labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1b0critical Istr: t:.LBB0_4 labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1b4critical Istr: t:.LBB0_3 labels: 
+.Ltmp4
+.LBB0_2
+.Ltmp5
+.Ltmp6
+
+
+1d4critical Istr: t:sys_exit labels: 
+.LBB0_3
+.Ltmp7
+
+
+1d8critical Istr: t:.LBB0_4 labels: 
+.LBB0_3
+.Ltmp7
+
+
+1f8critical Istr: t:array_copy labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+208critical Istr: t:array_eq labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+218critical Istr: t:.LBB0_6 labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+21ccritical Istr: t:.LBB0_5 labels: 
+.Ltmp8
+.LBB0_4
+.Ltmp9
+.Ltmp10
+
+
+23ccritical Istr: t:sys_exit labels: 
+.LBB0_5
+.Ltmp11
+
+
+240critical Istr: t:.LBB0_6 labels: 
+.LBB0_5
+.Ltmp11
+
+
+254critical Istr: t:insertion_sort labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+268critical Istr: t:array_eq labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+278critical Istr: t:.LBB0_8 labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+27ccritical Istr: t:.LBB0_7 labels: 
+.Ltmp12
+.LBB0_6
+.Ltmp13
+.Ltmp14
+
+
+29ccritical Istr: t:sys_exit labels: 
+.LBB0_7
+.Ltmp15
+
+
+2a0critical Istr: t:.LBB0_8 labels: 
+.LBB0_7
+.Ltmp15
+
+
+2c0critical Istr: t:array_copy labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2d0critical Istr: t:array_eq labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2e0critical Istr: t:.LBB0_10 labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+2e4critical Istr: t:.LBB0_9 labels: 
+.Ltmp16
+.LBB0_8
+.Ltmp17
+.Ltmp18
+
+
+304critical Istr: t:sys_exit labels: 
+.LBB0_9
+.Ltmp19
+
+
+308critical Istr: t:.LBB0_10 labels: 
+.LBB0_9
+.Ltmp19
+
+
+31ccritical Istr: t:selection_sort labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+330critical Istr: t:array_eq labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+340critical Istr: t:.LBB0_12 labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+344critical Istr: t:.LBB0_11 labels: 
+.Ltmp20
+.LBB0_10
+.Ltmp21
+.Ltmp22
+
+
+364critical Istr: t:sys_exit labels: 
+.LBB0_11
+.Ltmp23
+
+
+368critical Istr: t:.LBB0_12 labels: 
+.LBB0_11
+.Ltmp23
+
+
+380critical Istr: t:sys_exit labels: 
+.Ltmp24
+.LBB0_12
+
+
+3c8critical Istr: t:.LBB1_1 labels: 
+.Ltmp25
+.Lfunc_end0
+array_copy
+.Lfunc_begin1
+.Ltmp26
+
+
+3d8critical Istr: t:.LBB1_4 labels: 
+.LBB1_1
+.Ltmp27
+.Ltmp28
+
+
+3dccritical Istr: t:.LBB1_2 labels: 
+.LBB1_1
+.Ltmp27
+.Ltmp28
+
+
+3f4critical Istr: t:.LBB1_3 labels: 
+.LBB1_2
+.Ltmp29
+
+
+404critical Istr: t:.LBB1_1 labels: 
+.Ltmp30
+.LBB1_3
+
+
+448critical Istr: t:.LBB2_1 labels: 
+.Ltmp32
+.Lfunc_end1
+array_eq
+.Lfunc_begin2
+.Ltmp33
+
+
+458critical Istr: t:.LBB2_6 labels: 
+.LBB2_1
+.Ltmp34
+.Ltmp35
+
+
+45ccritical Istr: t:.LBB2_2 labels: 
+.LBB2_1
+.Ltmp34
+.Ltmp35
+
+
+478critical Istr: t:.LBB2_4 labels: 
+.LBB2_2
+.Ltmp36
+.Ltmp37
+
+
+47ccritical Istr: t:.LBB2_3 labels: 
+.LBB2_2
+.Ltmp36
+.Ltmp37
+
+
+488critical Istr: t:.LBB2_7 labels: 
+.LBB2_3
+.Ltmp38
+
+
+48ccritical Istr: t:.LBB2_5 labels: 
+.Ltmp39
+.LBB2_4
+
+
+49ccritical Istr: t:.LBB2_1 labels: 
+.Ltmp40
+.LBB2_5
+
+
+4a8critical Istr: t:.LBB2_7 labels: 
+.Ltmp41
+.LBB2_6
+
+
+4f4critical Istr: t:.LBB3_1 labels: 
+.Ltmp42
+.Lfunc_end2
+sys_exit
+.Lfunc_begin3
+.Ltmp43
+
+
+518critical Istr: t:.LBB4_1 labels: 
+.Ltmp44
+.Lfunc_end3
+bubble_sort
+.Lfunc_begin4
+.Ltmp45
+
+
+52ccritical Istr: t:.LBB4_2 labels: 
+.LBB4_1
+.Ltmp46
+.Ltmp47
+
+
+53ccritical Istr: t:.LBB4_7 labels: 
+.LBB4_2
+.Ltmp48
+.Ltmp49
+
+
+540critical Istr: t:.LBB4_3 labels: 
+.LBB4_2
+.Ltmp48
+.Ltmp49
+
+
+558critical Istr: t:.LBB4_5 labels: 
+.LBB4_3
+.Ltmp50
+.Ltmp51
+
+
+55ccritical Istr: t:.LBB4_4 labels: 
+.LBB4_3
+.Ltmp50
+.Ltmp51
+
+
+5a0critical Istr: t:.LBB4_5 labels: 
+.LBB4_4
+.Ltmp52
+
+
+5a4critical Istr: t:.LBB4_6 labels: 
+.Ltmp53
+.LBB4_5
+
+
+5b4critical Istr: t:.LBB4_2 labels: 
+.Ltmp54
+.LBB4_6
+
+
+5c4critical Istr: t:.LBB4_8 labels: 
+.Ltmp55
+.LBB4_7
+
+
+5d0critical Istr: t:.LBB4_1 labels: 
+.Ltmp56
+.LBB4_8
+.Ltmp57
+
+
+5d4critical Istr: t:.LBB4_9 labels: 
+.Ltmp56
+.LBB4_8
+.Ltmp57
+
+
+604critical Istr: t:.LBB5_1 labels: 
+.Ltmp59
+.Lfunc_end4
+insertion_sort
+.Lfunc_begin5
+.Ltmp60
+
+
+614critical Istr: t:.LBB5_8 labels: 
+.LBB5_1
+
+
+618critical Istr: t:.LBB5_2 labels: 
+.LBB5_1
+
+
+638critical Istr: t:.LBB5_3 labels: 
+.LBB5_2
+.Ltmp61
+
+
+64ccritical Istr: t:.LBB5_5 labels: 
+.LBB5_3
+
+
+650critical Istr: t:.LBB5_4 labels: 
+.LBB5_3
+
+
+674critical Istr: t:.LBB5_5 labels: 
+.LBB5_4
+
+
+680critical Istr: t:.LBB5_7 labels: 
+.LBB5_5
+
+
+684critical Istr: t:.LBB5_6 labels: 
+.LBB5_5
+
+
+6a4critical Istr: t:.LBB5_3 labels: 
+.LBB5_6
+.Ltmp62
+.Ltmp63
+
+
+6c8critical Istr: t:.LBB5_1 labels: 
+.LBB5_7
+.Ltmp64
+
+
+6f8critical Istr: t:.LBB6_1 labels: 
+.Ltmp65
+.Lfunc_end5
+selection_sort
+.Lfunc_begin6
+.Ltmp66
+
+
+710critical Istr: t:.LBB6_10 labels: 
+.LBB6_1
+.Ltmp67
+.Ltmp68
+
+
+714critical Istr: t:.LBB6_2 labels: 
+.LBB6_1
+.Ltmp67
+.Ltmp68
+
+
+72ccritical Istr: t:.LBB6_3 labels: 
+.LBB6_2
+.Ltmp69
+.Ltmp70
+
+
+73ccritical Istr: t:.LBB6_8 labels: 
+.LBB6_3
+.Ltmp71
+.Ltmp72
+
+
+740critical Istr: t:.LBB6_4 labels: 
+.LBB6_3
+.Ltmp71
+.Ltmp72
+
+
+75ccritical Istr: t:.LBB6_6 labels: 
+.LBB6_4
+.Ltmp73
+.Ltmp74
+
+
+760critical Istr: t:.LBB6_5 labels: 
+.LBB6_4
+.Ltmp73
+.Ltmp74
+
+
+76ccritical Istr: t:.LBB6_6 labels: 
+.LBB6_5
+.Ltmp75
+
+
+770critical Istr: t:.LBB6_7 labels: 
+.Ltmp76
+.LBB6_6
+
+
+780critical Istr: t:.LBB6_3 labels: 
+.Ltmp77
+.LBB6_7
+
+
+7b8critical Istr: t:.LBB6_9 labels: 
+.Ltmp78
+.LBB6_8
+
+
+7c8critical Istr: t:.LBB6_1 labels: 
+.Ltmp79
+.LBB6_9
+creating headerfile with data sizes in diversification binary infos
+running transformer control.RunTimeMeasurement$
+Time measured: 472ms
+running transformer control.StatisticsTransformer$
+big blocks: 66
+instructions: 438
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------

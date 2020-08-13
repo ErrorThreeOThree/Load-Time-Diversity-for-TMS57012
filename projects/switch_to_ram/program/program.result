@@ -1,0 +1,258 @@
+WCET-aware diversity.
+PROG:program/programS FACTOR: 1.0 HEURISTIC: true
+running transformer control.RunTimeMeasurement$
+running transformer control.ASMParser$
+WCET-aware diversity.
+PROG:program/programS FACTOR: 1.0 HEURISTIC: true
+running transformer control.RunTimeMeasurement$
+running transformer control.ASMParser$
+WCET-aware diversity.
+PROG:program/programS FACTOR: 1.0 HEURISTIC: true
+running transformer control.RunTimeMeasurement$
+running transformer control.ASMParser$
+section name extract: [	.text]->[.text]
+start section .text
+Jump: (	b	.LBB0_1)
+Jump: (	beq	.LBB0_3)
+Jump: (	b	.LBB0_2)
+Jump: (	b	.LBB0_4)
+Jump: (	b	.LBB0_4)
+Jump: (	b	.LBB0_5)
+Jump: (	bgt	.LBB0_8)
+Jump: (	b	.LBB0_6)
+Jump: (	b	.LBB0_7)
+Jump: (	b	.LBB0_5)
+Jump: (	b	.LBB0_1)
+section name extract: [	.section	.debug_str,"MS",%progbits,1]->[.debug]
+start section .debug
+section name extract: [	.section	.debug_abbrev,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_info,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_ranges,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_macinfo,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubnames,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubtypes,"",%progbits]->[.debug]
+section name extract: [	.section	".note.GNU-stack","",%progbits]->[]
+start section 
+section name extract: [	.section	.debug_line,"",%progbits]->[.debug]
+start section .debug
+running transformer control.ASMParserAUXFiles$
+aux files 
+aux file 
+running transformer control.PaddingInsertionTransformer$
+ERROR: maxpad parameter must be integer
+running transformer control.StartAdressRetriever$
+arm-linux-gnueabi-objdump -D program/programS
+Disassembly of section .text:
+
+
+section string 000100b8
+section start .text: 65720
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitMISSizeTransformer$
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitBBSizeTransformer$
+max bb size0
+running transformer control.LitPoolTransformer$
+List()
+running transformer control.ASMFileWriter$
+running transformer control.ASCompileTransformer$
+arm-linux-gnueabi-gcc -static -nostdlib -g0 -O0 --entry main --entry main ./program/program_shuffle_rdy.s -o ./program/programS
+running transformer control.AddressInsertionTransformer$
+running transformer control.StatisticsTransformer$
+big blocks: 16
+instructions: 70
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+running transformer control.MISStartAddressWriter$
+
+	sub	sp, sp, #16 100b8=65720
+	ldr	r0, [sp, #8] 10140=65856
+	ldr	r0, [sp, #4] 1015c=65884
+	ldr	r0, [sp, #4] 10174=65908
+	mov	r0, #0 1018c=65932
+	ldr	r0, [sp] 10198=65944
+	b	.LBB0_7 101b0=65968
+	ldr	r0, [sp] 101b4=65972
+	b	.LBB0_1 101c4=65988
+running transformer control.MISSerializerTransformer$
+main: MIS ID #0
+.Lfunc_begin0: MIS ID #0
+.Ltmp0: MIS ID #0
+.LBB0_1: MIS ID #1
+.Ltmp1: MIS ID #1
+.Ltmp2: MIS ID #1
+.LBB0_2: MIS ID #2
+.Ltmp3: MIS ID #2
+.Ltmp4: MIS ID #3
+.LBB0_3: MIS ID #3
+.Ltmp5: MIS ID #4
+.LBB0_4: MIS ID #4
+.LBB0_5: MIS ID #5
+.Ltmp6: MIS ID #5
+.Ltmp7: MIS ID #5
+.LBB0_6: MIS ID #6
+.LBB0_7: MIS ID #7
+.Ltmp8: MIS ID #7
+.Ltmp9: MIS ID #8
+.LBB0_8: MIS ID #8
+running transformer control.MISBranchCollectorTransformer$
+Jump with label ".LBB0_1" goes to MIS Nr 0
+Jump with label ".LBB0_3" goes to MIS Nr 1
+Jump with label ".LBB0_2" goes to MIS Nr 1
+Jump with label ".LBB0_4" goes to MIS Nr 2
+Jump with label ".LBB0_4" goes to MIS Nr 3
+Jump with label ".LBB0_5" goes to MIS Nr 4
+Jump with label ".LBB0_8" goes to MIS Nr 5
+Jump with label ".LBB0_6" goes to MIS Nr 5
+Jump with label ".LBB0_7" goes to MIS Nr 6
+Jump with label ".LBB0_5" goes to MIS Nr 7
+Jump with label ".LBB0_1" goes to MIS Nr 8
+running transformer control.MISBranchTableWriter$
+
+jump at address 65852 goes to MIS ID #1
+jump at address 65876 goes to MIS ID #3
+jump at address 65880 goes to MIS ID #2
+jump at address 65904 goes to MIS ID #4
+jump at address 65928 goes to MIS ID #4
+jump at address 65940 goes to MIS ID #5
+jump at address 65960 goes to MIS ID #8
+jump at address 65964 goes to MIS ID #6
+jump at address 65968 goes to MIS ID #7
+jump at address 65984 goes to MIS ID #5
+jump at address 65988 goes to MIS ID #1
+running transformer control.RunTimeMeasurement$
+Time measured: 331ms
+running transformer control.StatisticsTransformer$
+big blocks: 16
+instructions: 70
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+WCET-aware diversity.
+PROG:program/programS FACTOR: 1.0 HEURISTIC: true
+running transformer control.RunTimeMeasurement$
+running transformer control.ASMParser$
+section name extract: [	.text]->[.text]
+start section .text
+Jump: (	b	.LBB0_1)
+Jump: (	beq	.LBB0_3)
+Jump: (	b	.LBB0_2)
+Jump: (	b	.LBB0_4)
+Jump: (	b	.LBB0_4)
+Jump: (	b	.LBB0_5)
+Jump: (	bgt	.LBB0_8)
+Jump: (	b	.LBB0_6)
+Jump: (	b	.LBB0_7)
+Jump: (	b	.LBB0_5)
+Jump: (	b	.LBB0_1)
+section name extract: [	.section	.debug_str,"MS",%progbits,1]->[.debug]
+start section .debug
+section name extract: [	.section	.debug_abbrev,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_info,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_ranges,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_macinfo,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubnames,"",%progbits]->[.debug]
+section name extract: [	.section	.debug_pubtypes,"",%progbits]->[.debug]
+section name extract: [	.section	".note.GNU-stack","",%progbits]->[]
+start section 
+section name extract: [	.section	.debug_line,"",%progbits]->[.debug]
+start section .debug
+running transformer control.ASMParserAUXFiles$
+aux files 
+aux file 
+running transformer control.PaddingInsertionTransformer$
+ERROR: maxpad parameter must be integer
+running transformer control.StartAdressRetriever$
+arm-linux-gnueabi-objdump -D program/programS
+Disassembly of section .text:
+
+
+section string 000100b8
+section start .text: 65720
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitMISSizeTransformer$
+running transformer control.AddressInsertionTransformer$
+running transformer control.LimitBBSizeTransformer$
+max bb size0
+running transformer control.LitPoolTransformer$
+List()
+running transformer control.ASMFileWriter$
+running transformer control.ASCompileTransformer$
+arm-linux-gnueabi-gcc -static -nostdlib -g0 -O0 --entry main --entry main ./program/program_shuffle_rdy.s -o ./program/programS
+running transformer control.AddressInsertionTransformer$
+running transformer control.StatisticsTransformer$
+big blocks: 16
+instructions: 70
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------
+running transformer control.MISStartAddressWriter$
+
+	sub	sp, sp, #16 100b8=65720
+	ldr	r0, [sp, #8] 10140=65856
+	ldr	r0, [sp, #4] 1015c=65884
+	ldr	r0, [sp, #4] 10174=65908
+	mov	r0, #0 1018c=65932
+	ldr	r0, [sp] 10198=65944
+	b	.LBB0_7 101b0=65968
+	ldr	r0, [sp] 101b4=65972
+	b	.LBB0_1 101c4=65988
+running transformer control.MISSerializerTransformer$
+main: MIS ID #0
+.Lfunc_begin0: MIS ID #0
+.Ltmp0: MIS ID #0
+.LBB0_1: MIS ID #1
+.Ltmp1: MIS ID #1
+.Ltmp2: MIS ID #1
+.LBB0_2: MIS ID #2
+.Ltmp3: MIS ID #2
+.Ltmp4: MIS ID #3
+.LBB0_3: MIS ID #3
+.Ltmp5: MIS ID #4
+.LBB0_4: MIS ID #4
+.LBB0_5: MIS ID #5
+.Ltmp6: MIS ID #5
+.Ltmp7: MIS ID #5
+.LBB0_6: MIS ID #6
+.LBB0_7: MIS ID #7
+.Ltmp8: MIS ID #7
+.Ltmp9: MIS ID #8
+.LBB0_8: MIS ID #8
+running transformer control.MISBranchCollectorTransformer$
+Jump with label ".LBB0_1" goes to MIS Nr 0
+Jump with label ".LBB0_3" goes to MIS Nr 1
+Jump with label ".LBB0_2" goes to MIS Nr 1
+Jump with label ".LBB0_4" goes to MIS Nr 2
+Jump with label ".LBB0_4" goes to MIS Nr 3
+Jump with label ".LBB0_5" goes to MIS Nr 4
+Jump with label ".LBB0_8" goes to MIS Nr 5
+Jump with label ".LBB0_6" goes to MIS Nr 5
+Jump with label ".LBB0_7" goes to MIS Nr 6
+Jump with label ".LBB0_5" goes to MIS Nr 7
+Jump with label ".LBB0_1" goes to MIS Nr 8
+running transformer control.MISBranchTableWriter$
+
+jump at address 65852 goes to MIS ID #1
+jump at address 65876 goes to MIS ID #3
+jump at address 65880 goes to MIS ID #2
+jump at address 65904 goes to MIS ID #4
+jump at address 65928 goes to MIS ID #4
+jump at address 65940 goes to MIS ID #5
+jump at address 65960 goes to MIS ID #8
+jump at address 65964 goes to MIS ID #6
+jump at address 65968 goes to MIS ID #7
+jump at address 65984 goes to MIS ID #5
+jump at address 65988 goes to MIS ID #1
+running transformer control.RunTimeMeasurement$
+Time measured: 273ms
+running transformer control.StatisticsTransformer$
+big blocks: 16
+instructions: 70
+basic blocks: 0
+wcet: 0
+density: 0
+-----------------------------------

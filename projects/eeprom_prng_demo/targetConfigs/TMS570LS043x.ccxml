@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+<configuration XML_version="1.2" id="Texas Instruments XDS100v2 USB Debug Probe_0">
+        <instance XML_version="1.2" desc="Texas Instruments XDS100v2 USB Debug Probe_0" href="connections/TIXDS100v2_Connection.xml" id="Texas Instruments XDS100v2 USB Debug Probe_0" xml="TIXDS100v2_Connection.xml" xmlpath="connections"/>
+        <connection XML_version="1.2" id="Texas Instruments XDS100v2 USB Debug Probe_0">
+            <instance XML_version="1.2" href="drivers/tixds100v2icepick_c.xml" id="drivers" xml="tixds100v2icepick_c.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2cs_dap.xml" id="drivers" xml="tixds100v2cs_dap.xml" xmlpath="drivers"/>
+            <instance XML_version="1.2" href="drivers/tixds100v2cortexR.xml" id="drivers" xml="tixds100v2cortexR.xml" xmlpath="drivers"/>
+            <property Type="choicelist" Value="2" id="The JTAG TCLK Frequency (MHz)">
+                <choice Name="Fixed with user specified slower value" value="SPECIFIC">
+                    <property Type="stringfield" Value="488KHz" id="-- Enter a value from 488Hz to 1.0MHz"/>
+                </choice>
+            </property>
+            <platform XML_version="1.2" id="platform_0">
+                <instance XML_version="1.2" desc="TMS570LS043x_0" href="devices/tms570ls043x.xml" id="TMS570LS043x_0" xml="tms570ls043x.xml" xmlpath="devices"/>
+            <device HW_revision="0" XML_version="1.2" description="TMS570LS043x TQFP, 384kB Flash, 32kB RAM" id="TMS570LS043x_0" partnum="TMS570LS043x" simulation="no">
+                    <router HW_revision="1.0" XML_version="1.2" description="ICEPick_C Router" id="IcePick_C_0" isa="ICEPICK_C">
+                        <property Type="choicelist" Value="0" id="bypass"/>
+                    </router>
+                </device>
+            </platform>
+        </connection>
+    </configuration>
+</configurations>

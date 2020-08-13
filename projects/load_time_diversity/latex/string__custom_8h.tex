@@ -1,0 +1,89 @@
+\hypertarget{string__custom_8h}{}\section{loader/include\+\_\+manual/string\+\_\+custom.h File Reference}
+\label{string__custom_8h}\index{loader/include\+\_\+manual/string\+\_\+custom.\+h@{loader/include\+\_\+manual/string\+\_\+custom.\+h}}
+
+
+Header for \hyperlink{string__custom_8c}{string\+\_\+custom.\+c}.  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+Include dependency graph for string\+\_\+custom.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{string__custom_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{string__custom_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{string__custom_8h_a159921c75408b972a75a660693b13f28}{memcpy\+\_\+custom} (void $\ast$dst, const void $\ast$src, size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Copies {\ttfamily n} bytes from {\ttfamily src} to {\ttfamily dst}. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{string__custom_8h_ae9e74be2def48c8cd4693061980fb49f}{memset\+\_\+custom} (void $\ast$dst, uint8\+\_\+t val, size\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em sets {\ttfamily len} bytes starting at {\ttfamily dst} to {\ttfamily val} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header for \hyperlink{string__custom_8c}{string\+\_\+custom.\+c}. 
+
+\begin{DoxyDate}{Date}
+19-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+Header file with function prototypes for \hyperlink{string__custom_8c}{string\+\_\+custom.\+c} 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{string__custom_8h_a159921c75408b972a75a660693b13f28}\label{string__custom_8h_a159921c75408b972a75a660693b13f28}} 
+\index{string\+\_\+custom.\+h@{string\+\_\+custom.\+h}!memcpy\+\_\+custom@{memcpy\+\_\+custom}}
+\index{memcpy\+\_\+custom@{memcpy\+\_\+custom}!string\+\_\+custom.\+h@{string\+\_\+custom.\+h}}
+\subsubsection{\texorpdfstring{memcpy\+\_\+custom()}{memcpy\_custom()}}
+{\footnotesize\ttfamily void$\ast$ memcpy\+\_\+custom (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{const void $\ast$}]{src,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Copies {\ttfamily n} bytes from {\ttfamily src} to {\ttfamily dst}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dst} & start address \\
+\hline
+\mbox{\tt in}  & {\em src} & source address \\
+\hline
+\mbox{\tt in}  & {\em n} & number of bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dst same as dst
+\end{DoxyReturn}
+Copies {\ttfamily n} bytes from {\ttfamily src} to {\ttfamily dst}. \mbox{\Hypertarget{string__custom_8h_ae9e74be2def48c8cd4693061980fb49f}\label{string__custom_8h_ae9e74be2def48c8cd4693061980fb49f}} 
+\index{string\+\_\+custom.\+h@{string\+\_\+custom.\+h}!memset\+\_\+custom@{memset\+\_\+custom}}
+\index{memset\+\_\+custom@{memset\+\_\+custom}!string\+\_\+custom.\+h@{string\+\_\+custom.\+h}}
+\subsubsection{\texorpdfstring{memset\+\_\+custom()}{memset\_custom()}}
+{\footnotesize\ttfamily void$\ast$ memset\+\_\+custom (\begin{DoxyParamCaption}\item[{void $\ast$}]{dst,  }\item[{uint8\+\_\+t}]{val,  }\item[{size\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+sets {\ttfamily len} bytes starting at {\ttfamily dst} to {\ttfamily val} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dst} & start address \\
+\hline
+\mbox{\tt in}  & {\em val} & value which will be set \\
+\hline
+\mbox{\tt in}  & {\em len} & number of bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+same as dst
+\end{DoxyReturn}
+Sets {\ttfamily len} bytes starting at {\ttfamily dst} to {\ttfamily val}. 

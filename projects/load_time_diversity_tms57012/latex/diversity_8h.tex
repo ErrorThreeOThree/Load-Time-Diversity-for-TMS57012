@@ -1,0 +1,154 @@
+\hypertarget{diversity_8h}{}\section{loader/include\+\_\+manual/diversity.h File Reference}
+\label{diversity_8h}\index{loader/include\+\_\+manual/diversity.\+h@{loader/include\+\_\+manual/diversity.\+h}}
+
+
+Header file for \hyperlink{diversity_8h}{diversity.\+h} including structure definitions.  
+
+
+{\ttfamily \#include \char`\"{}div\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+Include dependency graph for diversity.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{diversity_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{diversity_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbt__entry}{bt\+\_\+entry}
+\begin{DoxyCompactList}\small\item\em branch table entry Stores one branch table entry \end{DoxyCompactList}\item 
+struct \hyperlink{structdiv__data}{div\+\_\+data}
+\begin{DoxyCompactList}\small\item\em diversification data struct Stores all the data for program diversification \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{diversity_8h_abcafba47a194b29ca93672b22eba142e}{div\+\_\+load\+\_\+data} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data, const uint32\+\_\+t $\ast$code\+\_\+load, uint32\+\_\+t $\ast$code\+\_\+exec, const uint32\+\_\+t $\ast$data\+\_\+load)
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{structdiv__data}{div\+\_\+data}. \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8h_a0c691423b64087ad4f5e410ea63696fc}{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Generates a new order of M\+IS, updates {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8h_a737b2fa44c587447b450492b2dc770df}{div\+\_\+load\+\_\+user\+\_\+program} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Loads the program with M\+IS order specified in {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. Updates {\ttfamily data} \textquotesingle{}s mis\+\_\+code\+\_\+exec\+\_\+offs. \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8h_a95830ddb5eb9db3cfbfdb11564630c70}{div\+\_\+data\+\_\+set\+\_\+zeros} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em sets all members of {\ttfamily data} to zero. \end{DoxyCompactList}\item 
+int \hyperlink{diversity_8h_a76cd6e5691d0d4ae291d666f0f47e940}{div\+\_\+verify\+\_\+exec\+\_\+code} (const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Verifies the loaded program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{diversity_8h}{diversity.\+h} including structure definitions. 
+
+\begin{DoxyDate}{Date}
+19-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+Header file for \hyperlink{diversity_8h}{diversity.\+h} including structures struct \hyperlink{structbt__entry}{bt\+\_\+entry} and struct \hyperlink{structdiv__data}{div\+\_\+data} 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{diversity_8h_a95830ddb5eb9db3cfbfdb11564630c70}\label{diversity_8h_a95830ddb5eb9db3cfbfdb11564630c70}} 
+\index{diversity.\+h@{diversity.\+h}!div\+\_\+data\+\_\+set\+\_\+zeros@{div\+\_\+data\+\_\+set\+\_\+zeros}}
+\index{div\+\_\+data\+\_\+set\+\_\+zeros@{div\+\_\+data\+\_\+set\+\_\+zeros}!diversity.\+h@{diversity.\+h}}
+\subsubsection{\texorpdfstring{div\+\_\+data\+\_\+set\+\_\+zeros()}{div\_data\_set\_zeros()}}
+{\footnotesize\ttfamily void div\+\_\+data\+\_\+set\+\_\+zeros (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+sets all members of {\ttfamily data} to zero. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to struct \hyperlink{structdiv__data}{div\+\_\+data}\\
+\hline
+\end{DoxyParams}
+Sets all members of {\ttfamily data} to zero \mbox{\Hypertarget{diversity_8h_a0c691423b64087ad4f5e410ea63696fc}\label{diversity_8h_a0c691423b64087ad4f5e410ea63696fc}} 
+\index{diversity.\+h@{diversity.\+h}!div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order@{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order}}
+\index{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order@{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order}!diversity.\+h@{diversity.\+h}}
+\subsubsection{\texorpdfstring{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order()}{div\_generate\_MIS\_order()}}
+{\footnotesize\ttfamily void div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Generates a new order of M\+IS, updates {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & initialized pointer to struct \hyperlink{structdiv__data}{div\+\_\+data}\\
+\hline
+\end{DoxyParams}
+Generates a new M\+IS order. Uses P\+R\+NG. Stores the order in {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. \mbox{\Hypertarget{diversity_8h_abcafba47a194b29ca93672b22eba142e}\label{diversity_8h_abcafba47a194b29ca93672b22eba142e}} 
+\index{diversity.\+h@{diversity.\+h}!div\+\_\+load\+\_\+data@{div\+\_\+load\+\_\+data}}
+\index{div\+\_\+load\+\_\+data@{div\+\_\+load\+\_\+data}!diversity.\+h@{diversity.\+h}}
+\subsubsection{\texorpdfstring{div\+\_\+load\+\_\+data()}{div\_load\_data()}}
+{\footnotesize\ttfamily void div\+\_\+load\+\_\+data (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data,  }\item[{const uint32\+\_\+t $\ast$}]{code\+\_\+load,  }\item[{uint32\+\_\+t $\ast$}]{code\+\_\+exec,  }\item[{const uint32\+\_\+t $\ast$}]{data\+\_\+load }\end{DoxyParamCaption})}
+
+
+
+Initialize \hyperlink{structdiv__data}{div\+\_\+data}. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & \\
+\hline
+\mbox{\tt in}  & {\em code\+\_\+load} & \\
+\hline
+\mbox{\tt in}  & {\em code\+\_\+exec} & \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+load} & Initializes {\ttfamily data} with the values values mis\+\_\+code\+\_\+load\+\_\+offs, mis\+\_\+code\+\_\+size and bt stored at {\ttfamily data\+\_\+load}, Copies {\ttfamily code\+\_\+load} and {\ttfamily code\+\_\+exec}. Initializes id\+\_\+to\+\_\+pos, pos\+\_\+to\+\_\+id and mis\+\_\+code\+\_\+exec\+\_\+offs with zeros. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{diversity_8h_a737b2fa44c587447b450492b2dc770df}\label{diversity_8h_a737b2fa44c587447b450492b2dc770df}} 
+\index{diversity.\+h@{diversity.\+h}!div\+\_\+load\+\_\+user\+\_\+program@{div\+\_\+load\+\_\+user\+\_\+program}}
+\index{div\+\_\+load\+\_\+user\+\_\+program@{div\+\_\+load\+\_\+user\+\_\+program}!diversity.\+h@{diversity.\+h}}
+\subsubsection{\texorpdfstring{div\+\_\+load\+\_\+user\+\_\+program()}{div\_load\_user\_program()}}
+{\footnotesize\ttfamily void div\+\_\+load\+\_\+user\+\_\+program (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Loads the program with M\+IS order specified in {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. Updates {\ttfamily data} \textquotesingle{}s mis\+\_\+code\+\_\+exec\+\_\+offs. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & initialized pointer to struct \hyperlink{structdiv__data}{div\+\_\+data} with order specified in id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id\\
+\hline
+\end{DoxyParams}
+Loads the program from address {\ttfamily data} \textquotesingle{}s code\+\_\+load to code\+\_\+exec with M\+IS order {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. Updates {\ttfamily data} \textquotesingle{}s mis\+\_\+code\+\_\+exec\+\_\+offs. Fixes all branches using the {\ttfamily data} \textquotesingle{}s branch table bt. \mbox{\Hypertarget{diversity_8h_a76cd6e5691d0d4ae291d666f0f47e940}\label{diversity_8h_a76cd6e5691d0d4ae291d666f0f47e940}} 
+\index{diversity.\+h@{diversity.\+h}!div\+\_\+verify\+\_\+exec\+\_\+code@{div\+\_\+verify\+\_\+exec\+\_\+code}}
+\index{div\+\_\+verify\+\_\+exec\+\_\+code@{div\+\_\+verify\+\_\+exec\+\_\+code}!diversity.\+h@{diversity.\+h}}
+\subsubsection{\texorpdfstring{div\+\_\+verify\+\_\+exec\+\_\+code()}{div\_verify\_exec\_code()}}
+{\footnotesize\ttfamily int div\+\_\+verify\+\_\+exec\+\_\+code (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Verifies the loaded program. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to \hyperlink{structdiv__data}{div\+\_\+data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 on success or offset of the function which caused verfication error
+\end{DoxyReturn}
+Verifies each line loaded to {\ttfamily data} -\/$>$code\+\_\+exec by comparing the destination M\+IS and offset inside M\+IS with the original M\+IS and offset. Should only be used for debug purposes as it is optimized poorly. 

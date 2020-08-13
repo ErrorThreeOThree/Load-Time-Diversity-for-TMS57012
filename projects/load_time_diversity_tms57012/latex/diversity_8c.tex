@@ -1,0 +1,313 @@
+\hypertarget{diversity_8c}{}\section{loader/source\+\_\+manual/diversity.c File Reference}
+\label{diversity_8c}\index{loader/source\+\_\+manual/diversity.\+c@{loader/source\+\_\+manual/diversity.\+c}}
+
+
+Load time diversification source file.  
+
+
+{\ttfamily \#include \char`\"{}string\+\_\+custom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdint.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}diversity.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rand.\+h\char`\"{}}\newline
+Include dependency graph for diversity.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{diversity_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{diversity_8c_a7ef1544d2b8c302b80d9f72170611758}\label{diversity_8c_a7ef1544d2b8c302b80d9f72170611758}} 
+\#define \hyperlink{diversity_8c_a7ef1544d2b8c302b80d9f72170611758}{I\+N\+S\+T\+R\+\_\+\+J\+U\+M\+P\+\_\+\+O\+F\+F\+S\+\_\+\+M\+A\+S\+K\+\_\+\+B\+I\+T\+S\+\_\+\+A\+M\+O\+U\+NT}~24
+\begin{DoxyCompactList}\small\item\em number of branch offset bits The number of bits used for branch offset. Equal to the branch range. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{diversity_8c_aace8f8d154897a77dfddeefc9370aa25}\label{diversity_8c_aace8f8d154897a77dfddeefc9370aa25}} 
+\#define \hyperlink{diversity_8c_aace8f8d154897a77dfddeefc9370aa25}{I\+N\+S\+T\+R\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+O\+F\+F\+S\+\_\+\+M\+A\+SK}~0x00\+F\+F\+F\+F\+FF
+\begin{DoxyCompactList}\small\item\em branch destination offset bits Masks the destination offset bits of all branch instructions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{diversity_8c_a65d97b5792f4faecc2c1aa9753ffc97c}\label{diversity_8c_a65d97b5792f4faecc2c1aa9753ffc97c}} 
+\#define \hyperlink{diversity_8c_a65d97b5792f4faecc2c1aa9753ffc97c}{I\+N\+S\+T\+R\+\_\+\+J\+U\+M\+P\+\_\+\+I\+N\+S\+T\+R\+\_\+\+M\+A\+SK}~($\sim$\hyperlink{diversity_8c_aace8f8d154897a77dfddeefc9370aa25}{I\+N\+S\+T\+R\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+O\+F\+F\+S\+\_\+\+M\+A\+SK})
+\begin{DoxyCompactList}\small\item\em branch instruction encoding bits Masks the instruction encoding bits of branch instructions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{diversity_8c_a9331a0542d102c10c71226ff8813d9c2}{calculate\+\_\+instr\+\_\+jump\+\_\+offset} (const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data, const struct \hyperlink{structbt__entry}{bt\+\_\+entry} $\ast$bt, uint32\+\_\+t mis\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Calculates the execution-\/load offset of the jump in bt. \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8c_a507b2f1191246b4eb7ba39a4bf00368d}{update\+\_\+mis\+\_\+code\+\_\+exec\+\_\+offs} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Updates the code execution offsets in {\ttfamily data}. \end{DoxyCompactList}\item 
+int \hyperlink{diversity_8c_af6d2c702615c5af44d22692528f98b3c}{verify\+\_\+instruction} (const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data, uint32\+\_\+t instr\+\_\+exec\+\_\+offs, uint32\+\_\+t cur\+\_\+mis\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Verifies instruction {\ttfamily instr\+\_\+exec\+\_\+offs}. \end{DoxyCompactList}\item 
+int \hyperlink{diversity_8c_aead8f65d5f890ad2df5db24cbd4be5b8}{verify\+\_\+jump} (const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data, uint32\+\_\+t jmp\+\_\+instr\+\_\+exec\+\_\+offs, uint32\+\_\+t jmp\+\_\+instr\+\_\+load\+\_\+offs, uint32\+\_\+t cur\+\_\+mis\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Verifies a branch instruction. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{diversity_8c_ae686501b0e5a3653fb89bd3059f8c67b}{code\+\_\+get\+\_\+mis\+\_\+id} (uint32\+\_\+t instr\+\_\+offs, const uint32\+\_\+t $\ast$mis\+\_\+code\+\_\+offs, const uint32\+\_\+t $\ast$mis\+\_\+code\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Calculates and return the M\+IS of the instruction. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{diversity_8c_a8cb4804a79fb7573ee4e1468317f2423}{reduce} (uint32\+\_\+t x, uint32\+\_\+t N)
+\begin{DoxyCompactList}\small\item\em fast reduction of x to range 0...N \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8c_abcafba47a194b29ca93672b22eba142e}{div\+\_\+load\+\_\+data} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data, const uint32\+\_\+t $\ast$code\+\_\+load, uint32\+\_\+t $\ast$code\+\_\+exec, const uint32\+\_\+t $\ast$data\+\_\+load)
+\begin{DoxyCompactList}\small\item\em Initialize \hyperlink{structdiv__data}{div\+\_\+data}. \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8c_a0c691423b64087ad4f5e410ea63696fc}{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Generates a new order of M\+IS, updates {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8c_a737b2fa44c587447b450492b2dc770df}{div\+\_\+load\+\_\+user\+\_\+program} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Loads the program with M\+IS order specified in {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. Updates {\ttfamily data} \textquotesingle{}s mis\+\_\+code\+\_\+exec\+\_\+offs. \end{DoxyCompactList}\item 
+int \hyperlink{diversity_8c_a76cd6e5691d0d4ae291d666f0f47e940}{div\+\_\+verify\+\_\+exec\+\_\+code} (const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Verifies the loaded program. \end{DoxyCompactList}\item 
+void \hyperlink{diversity_8c_a95830ddb5eb9db3cfbfdb11564630c70}{div\+\_\+data\+\_\+set\+\_\+zeros} (struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$data)
+\begin{DoxyCompactList}\small\item\em sets all members of {\ttfamily data} to zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Load time diversification source file. 
+
+\begin{DoxyDate}{Date}
+19-\/06-\/07 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+This file contains\+:
+\begin{DoxyItemize}
+\item Functions for load-\/time diversification
+\item Functions to verify the diversified version 
+\end{DoxyItemize}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{diversity_8c_a9331a0542d102c10c71226ff8813d9c2}\label{diversity_8c_a9331a0542d102c10c71226ff8813d9c2}} 
+\index{diversity.\+c@{diversity.\+c}!calculate\+\_\+instr\+\_\+jump\+\_\+offset@{calculate\+\_\+instr\+\_\+jump\+\_\+offset}}
+\index{calculate\+\_\+instr\+\_\+jump\+\_\+offset@{calculate\+\_\+instr\+\_\+jump\+\_\+offset}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{calculate\+\_\+instr\+\_\+jump\+\_\+offset()}{calculate\_instr\_jump\_offset()}}
+{\footnotesize\ttfamily uint32\+\_\+t calculate\+\_\+instr\+\_\+jump\+\_\+offset (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data,  }\item[{const struct \hyperlink{structbt__entry}{bt\+\_\+entry} $\ast$}]{bt,  }\item[{uint32\+\_\+t}]{mis\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Calculates the execution-\/load offset of the jump in bt. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to \hyperlink{structdiv__data}{div\+\_\+data} \\
+\hline
+\mbox{\tt in}  & {\em bt} & Branch table entry for current branch \\
+\hline
+\mbox{\tt in}  & {\em mis\+\_\+id} & current instruction\textquotesingle{}s M\+IS ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+execution-\/load offset
+\end{DoxyReturn}
+Loads the program from address {\ttfamily data} \textquotesingle{}s code\+\_\+load to code\+\_\+exec with M\+IS order id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id in {\ttfamily data\textquotesingle{}s} members. Updates {\ttfamily data} \textquotesingle{}s mis\+\_\+code\+\_\+exec\+\_\+offs. \mbox{\Hypertarget{diversity_8c_ae686501b0e5a3653fb89bd3059f8c67b}\label{diversity_8c_ae686501b0e5a3653fb89bd3059f8c67b}} 
+\index{diversity.\+c@{diversity.\+c}!code\+\_\+get\+\_\+mis\+\_\+id@{code\+\_\+get\+\_\+mis\+\_\+id}}
+\index{code\+\_\+get\+\_\+mis\+\_\+id@{code\+\_\+get\+\_\+mis\+\_\+id}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{code\+\_\+get\+\_\+mis\+\_\+id()}{code\_get\_mis\_id()}}
+{\footnotesize\ttfamily uint32\+\_\+t code\+\_\+get\+\_\+mis\+\_\+id (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{instr\+\_\+offs,  }\item[{const uint32\+\_\+t $\ast$}]{mis\+\_\+code\+\_\+offs,  }\item[{const uint32\+\_\+t $\ast$}]{mis\+\_\+code\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Calculates and return the M\+IS of the instruction. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em instr\+\_\+offs} & offset of the instruction \\
+\hline
+\mbox{\tt in}  & {\em mis\+\_\+code\+\_\+offs} & pointer to array of M\+IS offset. Either data-\/$>$mis\+\_\+code\+\_\+load\+\_\+offs if the instruction is in load or data-\/$>$mis\+\_\+code\+\_\+exec\+\_\+offs if the instruction is in exec \\
+\hline
+\mbox{\tt in}  & {\em mis\+\_\+code\+\_\+size} & Array storing the size of each M\+IS. Should be data-\/$>$mis\+\_\+code\+\_\+size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instruction\textquotesingle{}s M\+IS or M\+I\+S\+\_\+\+A\+M\+O\+U\+NT on error
+\end{DoxyReturn}
+Calculates and return the instructions M\+IS at {\ttfamily offset} instr\+\_\+offs. Can be done for exec or load by setting {\ttfamily mis\+\_\+code\+\_\+offs} to data-\/$>$mis\+\_\+code\+\_\+exec\+\_\+offs or data-\/$>$mis\+\_\+code\+\_\+load\+\_\+offs accordingly. \mbox{\Hypertarget{diversity_8c_a95830ddb5eb9db3cfbfdb11564630c70}\label{diversity_8c_a95830ddb5eb9db3cfbfdb11564630c70}} 
+\index{diversity.\+c@{diversity.\+c}!div\+\_\+data\+\_\+set\+\_\+zeros@{div\+\_\+data\+\_\+set\+\_\+zeros}}
+\index{div\+\_\+data\+\_\+set\+\_\+zeros@{div\+\_\+data\+\_\+set\+\_\+zeros}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{div\+\_\+data\+\_\+set\+\_\+zeros()}{div\_data\_set\_zeros()}}
+{\footnotesize\ttfamily void div\+\_\+data\+\_\+set\+\_\+zeros (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+sets all members of {\ttfamily data} to zero. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to struct \hyperlink{structdiv__data}{div\+\_\+data}\\
+\hline
+\end{DoxyParams}
+Sets all members of {\ttfamily data} to zero \mbox{\Hypertarget{diversity_8c_a0c691423b64087ad4f5e410ea63696fc}\label{diversity_8c_a0c691423b64087ad4f5e410ea63696fc}} 
+\index{diversity.\+c@{diversity.\+c}!div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order@{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order}}
+\index{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order@{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order()}{div\_generate\_MIS\_order()}}
+{\footnotesize\ttfamily void div\+\_\+generate\+\_\+\+M\+I\+S\+\_\+order (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Generates a new order of M\+IS, updates {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & initialized pointer to struct \hyperlink{structdiv__data}{div\+\_\+data}\\
+\hline
+\end{DoxyParams}
+Generates a new M\+IS order. Uses P\+R\+NG. Stores the order in {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. \mbox{\Hypertarget{diversity_8c_abcafba47a194b29ca93672b22eba142e}\label{diversity_8c_abcafba47a194b29ca93672b22eba142e}} 
+\index{diversity.\+c@{diversity.\+c}!div\+\_\+load\+\_\+data@{div\+\_\+load\+\_\+data}}
+\index{div\+\_\+load\+\_\+data@{div\+\_\+load\+\_\+data}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{div\+\_\+load\+\_\+data()}{div\_load\_data()}}
+{\footnotesize\ttfamily void div\+\_\+load\+\_\+data (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data,  }\item[{const uint32\+\_\+t $\ast$}]{code\+\_\+load,  }\item[{uint32\+\_\+t $\ast$}]{code\+\_\+exec,  }\item[{const uint32\+\_\+t $\ast$}]{data\+\_\+load }\end{DoxyParamCaption})}
+
+
+
+Initialize \hyperlink{structdiv__data}{div\+\_\+data}. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & \\
+\hline
+\mbox{\tt in}  & {\em code\+\_\+load} & \\
+\hline
+\mbox{\tt in}  & {\em code\+\_\+exec} & \\
+\hline
+\mbox{\tt in}  & {\em data\+\_\+load} & Initializes {\ttfamily data} with the values values mis\+\_\+code\+\_\+load\+\_\+offs, mis\+\_\+code\+\_\+size and bt stored at {\ttfamily data\+\_\+load}, Copies {\ttfamily code\+\_\+load} and {\ttfamily code\+\_\+exec}. Initializes id\+\_\+to\+\_\+pos, pos\+\_\+to\+\_\+id and mis\+\_\+code\+\_\+exec\+\_\+offs with zeros. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{diversity_8c_a737b2fa44c587447b450492b2dc770df}\label{diversity_8c_a737b2fa44c587447b450492b2dc770df}} 
+\index{diversity.\+c@{diversity.\+c}!div\+\_\+load\+\_\+user\+\_\+program@{div\+\_\+load\+\_\+user\+\_\+program}}
+\index{div\+\_\+load\+\_\+user\+\_\+program@{div\+\_\+load\+\_\+user\+\_\+program}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{div\+\_\+load\+\_\+user\+\_\+program()}{div\_load\_user\_program()}}
+{\footnotesize\ttfamily void div\+\_\+load\+\_\+user\+\_\+program (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Loads the program with M\+IS order specified in {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. Updates {\ttfamily data} \textquotesingle{}s mis\+\_\+code\+\_\+exec\+\_\+offs. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & initialized pointer to struct \hyperlink{structdiv__data}{div\+\_\+data} with order specified in id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id\\
+\hline
+\end{DoxyParams}
+Loads the program from address {\ttfamily data} \textquotesingle{}s code\+\_\+load to code\+\_\+exec with M\+IS order {\ttfamily data} \textquotesingle{}s id\+\_\+to\+\_\+pos and pos\+\_\+to\+\_\+id. Updates {\ttfamily data} \textquotesingle{}s mis\+\_\+code\+\_\+exec\+\_\+offs. Fixes all branches using the {\ttfamily data} \textquotesingle{}s branch table bt. \mbox{\Hypertarget{diversity_8c_a76cd6e5691d0d4ae291d666f0f47e940}\label{diversity_8c_a76cd6e5691d0d4ae291d666f0f47e940}} 
+\index{diversity.\+c@{diversity.\+c}!div\+\_\+verify\+\_\+exec\+\_\+code@{div\+\_\+verify\+\_\+exec\+\_\+code}}
+\index{div\+\_\+verify\+\_\+exec\+\_\+code@{div\+\_\+verify\+\_\+exec\+\_\+code}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{div\+\_\+verify\+\_\+exec\+\_\+code()}{div\_verify\_exec\_code()}}
+{\footnotesize\ttfamily int div\+\_\+verify\+\_\+exec\+\_\+code (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Verifies the loaded program. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to \hyperlink{structdiv__data}{div\+\_\+data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 on success or offset of the function which caused verfication error
+\end{DoxyReturn}
+Verifies each line loaded to {\ttfamily data} -\/$>$code\+\_\+exec by comparing the destination M\+IS and offset inside M\+IS with the original M\+IS and offset. Should only be used for debug purposes as it is optimized poorly. \mbox{\Hypertarget{diversity_8c_a8cb4804a79fb7573ee4e1468317f2423}\label{diversity_8c_a8cb4804a79fb7573ee4e1468317f2423}} 
+\index{diversity.\+c@{diversity.\+c}!reduce@{reduce}}
+\index{reduce@{reduce}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{reduce()}{reduce()}}
+{\footnotesize\ttfamily uint32\+\_\+t reduce (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{x,  }\item[{uint32\+\_\+t}]{N }\end{DoxyParamCaption})}
+
+
+
+fast reduction of x to range 0...N 
+
+\begin{DoxyAuthor}{Author}
+\href{https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction/}{\tt https\+://lemire.\+me/blog/2016/06/27/a-\/fast-\/alternative-\/to-\/the-\/modulo-\/reduction/} 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & value to be reduced \\
+\hline
+\mbox{\tt in}  & {\em N} & reduction limit\\
+\hline
+\end{DoxyParams}
+Reduces the number {\ttfamily x} in to a value from 0 to {\ttfamily N}. Source\+: \mbox{\Hypertarget{diversity_8c_a507b2f1191246b4eb7ba39a4bf00368d}\label{diversity_8c_a507b2f1191246b4eb7ba39a4bf00368d}} 
+\index{diversity.\+c@{diversity.\+c}!update\+\_\+mis\+\_\+code\+\_\+exec\+\_\+offs@{update\+\_\+mis\+\_\+code\+\_\+exec\+\_\+offs}}
+\index{update\+\_\+mis\+\_\+code\+\_\+exec\+\_\+offs@{update\+\_\+mis\+\_\+code\+\_\+exec\+\_\+offs}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{update\+\_\+mis\+\_\+code\+\_\+exec\+\_\+offs()}{update\_mis\_code\_exec\_offs()}}
+{\footnotesize\ttfamily void update\+\_\+mis\+\_\+code\+\_\+exec\+\_\+offs (\begin{DoxyParamCaption}\item[{struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Updates the code execution offsets in {\ttfamily data}. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to \hyperlink{structdiv__data}{div\+\_\+data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+execution-\/load-\/offset
+\end{DoxyReturn}
+Updates the code execution offsets in {\ttfamily data} \mbox{\Hypertarget{diversity_8c_af6d2c702615c5af44d22692528f98b3c}\label{diversity_8c_af6d2c702615c5af44d22692528f98b3c}} 
+\index{diversity.\+c@{diversity.\+c}!verify\+\_\+instruction@{verify\+\_\+instruction}}
+\index{verify\+\_\+instruction@{verify\+\_\+instruction}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{verify\+\_\+instruction()}{verify\_instruction()}}
+{\footnotesize\ttfamily int verify\+\_\+instruction (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data,  }\item[{uint32\+\_\+t}]{instr\+\_\+exec\+\_\+offs,  }\item[{uint32\+\_\+t}]{cur\+\_\+mis\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Verifies instruction {\ttfamily instr\+\_\+exec\+\_\+offs}. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to \hyperlink{structdiv__data}{div\+\_\+data} \\
+\hline
+\mbox{\tt in}  & {\em instr\+\_\+exec\+\_\+offs} & offset of the instruction which we verify \\
+\hline
+\mbox{\tt in}  & {\em cur\+\_\+mis\+\_\+id} & M\+IS id of {\ttfamily cur\+\_\+instr\+\_\+exec\+\_\+offs} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on error, -\/1 on success
+\end{DoxyReturn}
+Verifies the instruction at exec offset {\ttfamily instr\+\_\+exec\+\_\+offs} \mbox{\Hypertarget{diversity_8c_aead8f65d5f890ad2df5db24cbd4be5b8}\label{diversity_8c_aead8f65d5f890ad2df5db24cbd4be5b8}} 
+\index{diversity.\+c@{diversity.\+c}!verify\+\_\+jump@{verify\+\_\+jump}}
+\index{verify\+\_\+jump@{verify\+\_\+jump}!diversity.\+c@{diversity.\+c}}
+\subsubsection{\texorpdfstring{verify\+\_\+jump()}{verify\_jump()}}
+{\footnotesize\ttfamily int verify\+\_\+jump (\begin{DoxyParamCaption}\item[{const struct \hyperlink{structdiv__data}{div\+\_\+data} $\ast$}]{data,  }\item[{uint32\+\_\+t}]{jmp\+\_\+instr\+\_\+exec\+\_\+offs,  }\item[{uint32\+\_\+t}]{jmp\+\_\+instr\+\_\+load\+\_\+offs,  }\item[{uint32\+\_\+t}]{cur\+\_\+mis\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Verifies a branch instruction. 
+
+\begin{DoxyAuthor}{Author}
+Julian Hartmer 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & pointer to \hyperlink{structdiv__data}{div\+\_\+data} \\
+\hline
+\mbox{\tt in}  & {\em jmp\+\_\+instr\+\_\+exec\+\_\+offs} & position of branch instruction in exec which is verified \\
+\hline
+\mbox{\tt in}  & {\em jmp\+\_\+instr\+\_\+load\+\_\+offs} & position of branch instruction in load which is verified \\
+\hline
+\mbox{\tt in}  & {\em cur\+\_\+mis\+\_\+id} & the instruction\textquotesingle{}s M\+ID id in exec \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 on success or offset of the function which caused verfication error
+\end{DoxyReturn}
+Verifies the branch instruction at {\ttfamily jmp\+\_\+instr\+\_\+exec\+\_\+offs} by comparing the desination M\+IS and offset of the desination instruction to the correspongin load instruction. 

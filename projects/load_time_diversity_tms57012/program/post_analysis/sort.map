@@ -1,0 +1,126 @@
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /tmp/ccHuURyk.o
+ .bss           0x0000000000000000        0x0 /tmp/ccHuURyk.o
+ .data          0x0000000000000000        0x0 /tmp/ccRQNwjn.o
+ .bss           0x0000000000000000        0x0 /tmp/ccRQNwjn.o
+ .data          0x0000000000000000        0x0 /tmp/cc8HTFIo.o
+ .bss           0x0000000000000000        0x0 /tmp/cc8HTFIo.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+KERNEL_RAM       0x0000000000000000 0x0000000000000100 xr
+USER_RAM         0x0000000000000100 0x00000000000076ff xrw
+STACK            0x00000000000077ff 0x0000000000000800 rw
+FLASH            0x0000000008008020 0x0000000000057fe0 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccHuURyk.o
+LOAD /tmp/ccRQNwjn.o
+LOAD /tmp/cc8HTFIo.o
+
+.kernelTEXT     0x0000000000000000       0x74
+ *(.ivt)
+ .ivt           0x0000000000000000       0x20 /tmp/ccRQNwjn.o
+                0x0000000000000000                IVT_START
+ *(.kernelTEXT)
+ .kernelTEXT    0x0000000000000020       0x54 /tmp/cc8HTFIo.o
+                0x0000000000000020                _init
+
+.text           0x0000000000000100      0x6e0
+                0x0000000000000100                . = ALIGN (0x100)
+ *(.init)
+ *(.text)
+ .text          0x0000000000000100      0x6d4 /tmp/ccHuURyk.o
+                0x0000000000000100                main
+                0x0000000000000390                array_copy
+                0x0000000000000410                array_eq
+                0x00000000000004b8                sys_exit
+                0x00000000000004fc                bubble_sort
+                0x00000000000005e0                insertion_sort
+                0x00000000000006d4                selection_sort
+ *fill*         0x00000000000007d4        0xc 
+ .text          0x00000000000007e0        0x0 /tmp/ccRQNwjn.o
+ .text          0x00000000000007e0        0x0 /tmp/cc8HTFIo.o
+ *(.text*)
+ *(.glue_7)
+ .glue_7        0x00000000000007e0        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000000007e0        0x0 linker stubs
+ *(.eh_frame)
+                0x00000000000007e0                . = ALIGN (0x4)
+
+.vfp11_veneer   0x00000000000007e0        0x0
+ .vfp11_veneer  0x00000000000007e0        0x0 linker stubs
+
+.v4_bx          0x00000000000007e0        0x0
+ .v4_bx         0x00000000000007e0        0x0 linker stubs
+
+.iplt           0x00000000000007e0        0x0
+ .iplt          0x00000000000007e0        0x0 /tmp/ccHuURyk.o
+
+.rodata         0x00000000000007e0      0x320
+                0x00000000000007e0                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x00000000000007e0      0x320 /tmp/ccHuURyk.o
+ *(.rodata*)
+
+.rel.dyn        0x0000000000000b00        0x0
+ .rel.iplt      0x0000000000000b00        0x0 /tmp/ccHuURyk.o
+
+.data           0x0000000000000b00        0x0
+                0x0000000000000b00                . = ALIGN (0x4)
+ *(.data)
+ *(.data*)
+OUTPUT(program/post_analysis/ram.out elf32-bigarm)
+
+.igot.plt       0x0000000000000b00        0x0
+ .igot.plt      0x0000000000000b00        0x0 /tmp/ccHuURyk.o
+
+.debug_str      0x0000000000000000      0x5e1
+ .debug_str     0x0000000000000000      0x5e1 /tmp/ccHuURyk.o
+
+.comment        0x0000000000000000       0x36
+ .comment       0x0000000000000000       0x36 /tmp/ccHuURyk.o
+                                         0x37 (size before relaxing)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /tmp/ccHuURyk.o
+
+.ARM.attributes
+                0x0000000000000000       0x37
+ .ARM.attributes
+                0x0000000000000000       0x3f /tmp/ccHuURyk.o
+ .ARM.attributes
+                0x000000000000003f       0x26 /tmp/ccRQNwjn.o
+ .ARM.attributes
+                0x0000000000000065       0x26 /tmp/cc8HTFIo.o
+
+.debug_line     0x0000000000000000      0x409
+ .debug_line    0x0000000000000000      0x34e /tmp/ccHuURyk.o
+ .debug_line    0x000000000000034e       0x57 /tmp/ccRQNwjn.o
+ .debug_line    0x00000000000003a5       0x64 /tmp/cc8HTFIo.o
+
+.debug_info     0x0000000000000000      0x1b5
+ .debug_info    0x0000000000000000       0x92 /tmp/ccHuURyk.o
+ .debug_info    0x0000000000000092       0x91 /tmp/ccRQNwjn.o
+ .debug_info    0x0000000000000123       0x92 /tmp/cc8HTFIo.o
+
+.debug_abbrev   0x0000000000000000       0x3c
+ .debug_abbrev  0x0000000000000000       0x14 /tmp/ccHuURyk.o
+ .debug_abbrev  0x0000000000000014       0x14 /tmp/ccRQNwjn.o
+ .debug_abbrev  0x0000000000000028       0x14 /tmp/cc8HTFIo.o
+
+.debug_aranges  0x0000000000000000       0x60
+ .debug_aranges
+                0x0000000000000000       0x20 /tmp/ccHuURyk.o
+ .debug_aranges
+                0x0000000000000020       0x20 /tmp/ccRQNwjn.o
+ .debug_aranges
+                0x0000000000000040       0x20 /tmp/cc8HTFIo.o

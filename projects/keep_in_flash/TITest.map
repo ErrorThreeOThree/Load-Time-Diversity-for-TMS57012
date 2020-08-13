@@ -1,0 +1,198 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+VECTORS          0x0000000000000000 0x0000000000000020 xr
+KERNEL           0x0000000000000020 0x0000000000008000 xr
+FLASH            0x0000000000008020 0x0000000000057fe0 xr
+CPU_STACK        0x0000000008000000 0x0000000000000800 rw
+KRAM             0x0000000008000800 0x0000000000000800 xrw
+RAM              0x0000000008001000 0x0000000000007000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD linker.lds
+                0x0000000008008000                _estack = 0x8008000
+                0x0000000000000400                _Min_Heap_Size = 0x400
+                0x0000000000008020                _sidata = LOADADDR (.data)
+                0x0000000008000800                _ksidata = LOADADDR (.kernelBSS)
+                0x0000000000000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (end, _ebss)
+                [!provide]                        PROVIDE (_end, _ebss)
+                0x0000000008008000                _estack = 0x8008000
+                0x0000000000000400                _Min_Heap_Size = 0x400
+
+.intvecs        0x0000000000000000        0x0
+                0x0000000000000000                . = ALIGN (0x4)
+ *(.intvecs)
+                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000000000                . = ALIGN (0x4)
+ *(.intvecs)
+                0x0000000000000000                . = ALIGN (0x4)
+
+.kernelTEXT     0x0000000000000020        0x0
+                0x0000000000000020                . = ALIGN (0x4)
+ *(.kernelTEXT)
+                0x0000000000000020                . = ALIGN (0x4)
+                0x0000000000000020                . = ALIGN (0x4)
+ *(.kernelTEXT)
+                0x0000000000000020                . = ALIGN (0x4)
+
+.text           0x0000000000008020        0x0
+                0x0000000000008020                . = ALIGN (0x4)
+ *(.text)
+ *(.text*)
+ *(.glue_7)
+ .glue_7        0x0000000000008020        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000000008020        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x0000000000008020                . = ALIGN (0x4)
+                0x0000000000008020                _etext = .
+                0x0000000000008020                . = ALIGN (0x4)
+ *(.text)
+ *(.text*)
+ *(.glue_7)
+ *(.glue_7t)
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x0000000000008020                . = ALIGN (0x4)
+                0x0000000000008020                _etext = .
+
+.vfp11_veneer   0x0000000000008020        0x0
+ .vfp11_veneer  0x0000000000008020        0x0 linker stubs
+
+.v4_bx          0x0000000000008020        0x0
+ .v4_bx         0x0000000000008020        0x0 linker stubs
+
+.rodata         0x0000000000008020        0x0
+                0x0000000000008020                . = ALIGN (0x4)
+ *(.rodata)
+ *(.rodata*)
+                0x0000000000008020                . = ALIGN (0x4)
+                0x0000000000008020                . = ALIGN (0x4)
+ *(.rodata)
+ *(.rodata*)
+                0x0000000000008020                . = ALIGN (0x4)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x0000000000008020        0x0
+                0x0000000000008020                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0000000000008020                __exidx_end = .
+                0x0000000000008020                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0000000000008020                __exidx_end = .
+
+.preinit_array  0x0000000000008020        0x0
+                [!provide]                        PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                [!provide]                        PROVIDE (__preinit_array_end, .)
+                [!provide]                        PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                [!provide]                        PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000000008020        0x0
+                [!provide]                        PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+                [!provide]                        PROVIDE (__init_array_end, .)
+                [!provide]                        PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+                [!provide]                        PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000000008020        0x0
+                [!provide]                        PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end, .)
+                [!provide]                        PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end, .)
+                0x0000000000008020                _sidata = LOADADDR (.data)
+
+.data           0x0000000008001000        0x0 load address 0x0000000000008020
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _sdata = .
+ *(.data)
+ *(.data*)
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _edata = .
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _ksdata = .
+ *(.data)
+ *(.data*)
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _kedata = .
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _sdata = .
+ *(.data)
+ *(.data*)
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _edata = .
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _ksdata = .
+ *(.data)
+ *(.data*)
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _kedata = .
+
+.kernelBSS      0x0000000008000800        0x0
+                0x0000000008000800                . = ALIGN (0x4)
+                0x0000000008000800                _kernel_bss = .
+ *(.kernelBSS)
+ *(.kernelBSS*)
+                0x0000000008000800                _ekernel_bss = .
+                0x0000000008000800                __kernel_bss_end__ = _ekernel_bss
+                0x0000000008000800                . = ALIGN (0x4)
+                0x0000000008000800                _kernel_bss = .
+ *(.kernelBSS)
+ *(.kernelBSS*)
+                0x0000000008000800                _ekernel_bss = .
+                0x0000000008000800                __kernel_bss_end__ = _ekernel_bss
+                0x0000000008000800                _ksidata = LOADADDR (.kernelBSS)
+
+.kernelHEAP
+                0x0000000008000800                . = ALIGN (0x4)
+
+.bss            0x0000000008001000        0x0
+                0x0000000008001000                _sbss = .
+                0x0000000008001000                __bss_start__ = _sbss
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _ebss = .
+                0x0000000008001000                __bss_end__ = _ebss
+                0x0000000008001000                _sbss = .
+                0x0000000008001000                __bss_start__ = _sbss
+ *(.bss)
+ *(.bss*)
+ *(COMMON)
+                0x0000000008001000                . = ALIGN (0x4)
+                0x0000000008001000                _ebss = .
+                0x0000000008001000                __bss_end__ = _ebss
+                [!provide]                        PROVIDE (end, _ebss)
+                [!provide]                        PROVIDE (_end, _ebss)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+ *(.ARM.attributes)
+ *(.ARM.attributes)
+OUTPUT(keep_in_flash.out elf32-bigarm)
