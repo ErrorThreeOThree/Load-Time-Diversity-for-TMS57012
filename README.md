@@ -5,6 +5,8 @@
 This repository contains files used in my bachelor's thesis "Compiler-Based Load-Time
 Diversity for Embedded Systems" handed in on July 5, 2019. In this thesis I propose a new compiler-guided load-time artificial software diversity approach designed for embedded systems, showcase and evaluate a prototype implementation.
 
+Due to copyright reasons, the compile-time code analyzer written in Scala is missing from this project. The code analyzer parses ARM assembler and outputs the code in a custom file format. The program is then loaded via the custom loader located in [__load_time_diversity__](projects/load_time_diversity). The loader diversifies the program by randomizing the memory address of function fraction and starts the loaded program.
+
 Folders:
 * [__projects__](projects): This is my Code Composer Studio. Notes for each project can be found in the project's README file. It contains the projects:
   * [__blinky_demo__](projects/blinky_demo): My first LED blinking demo. It is compiled with the TI Compiler.
